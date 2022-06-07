@@ -1,12 +1,10 @@
 <template>
-    <div class="sm:py-10">
-        <Html lang="en" />
+    <div class="flex min-h-screen flex-col bg-gray-50">
+        <Banner />
+        <Header />
         <NuxtPage />
+        <Footer />
     </div>
 </template>
 
-<style lang="postcss">
-body {
-    @apply bg-gray-50 dark:bg-gray-900;
-}
-</style>
+<script setup lang="ts"></script>

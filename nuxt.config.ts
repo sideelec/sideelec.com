@@ -19,7 +19,7 @@ export default defineNuxtConfig({
             { rel: "preconnect", href: "https://fonts.gstatic.com" },
         ],
     },
-    css: [],
+    css: ["~/assets/css/main.scss"],
     modules: [
         "@nuxt/content",
         "@nuxtjs/tailwindcss",
@@ -42,11 +42,7 @@ export default defineNuxtConfig({
             domain: config.domain,
         },
     },
-    content: {
-        highlight: {
-            theme: "one-dark-pro",
-        },
-    },
+    content: {},
     tailwindcss: {
         viewer: false,
     },
