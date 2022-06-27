@@ -1,5 +1,5 @@
 <template>
-    <div class="sticky top-0 border-b border-gray-200 bg-white">
+    <header class="sticky top-0 border-b border-gray-200 bg-white">
         <Popover class="relative" v-slot="{ close }">
             <div
                 class="custom-container flex items-center justify-between px-4 py-3"
@@ -71,7 +71,7 @@
                 </PopoverPanel>
             </transition>
         </Popover>
-    </div>
+    </header>
 </template>
 
 <script setup lang="ts">
