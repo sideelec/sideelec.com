@@ -31,7 +31,7 @@ const sizeClass = {
 }[size];
 
 const classes: string[] = [
-    "font-medium rounded-lg transition-all",
+    "font-medium rounded-lg transition-all uppercase",
     typeClass,
     sizeClass,
 ];
