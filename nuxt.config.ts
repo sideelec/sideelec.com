@@ -27,7 +27,7 @@ export default defineNuxtConfig({
     css: ["~/assets/css/main.scss"],
     modules: ["@nuxtjs/tailwindcss", "@vueuse/nuxt", "vue-plausible"],
     build: {
-        transpile: ["@headlessui/vue", "vue-plausible"],
+        transpile: ["@headlessui/vue", "@heroicons/vue", "vue-plausible"],
     },
     vite: {
         plugins: [vueJsx({})],
