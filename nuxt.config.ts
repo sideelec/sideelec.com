@@ -17,15 +17,15 @@ export default defineNuxtConfig({
                 defer: true,
             },
             { rel: "preconnect", href: "https://fonts.gstatic.com" },
+            {
+                rel: "icon",
+                type: "image/png",
+                href: "/logo.png",
+            },
         ],
     },
     css: ["~/assets/css/main.scss"],
-    modules: [
-        "@nuxt/content",
-        "@nuxtjs/tailwindcss",
-        "@vueuse/nuxt",
-        "vue-plausible",
-    ],
+    modules: ["@nuxtjs/tailwindcss", "@vueuse/nuxt", "vue-plausible"],
     build: {
         transpile: ["@headlessui/vue", "vue-plausible"],
     },
@@ -42,7 +42,6 @@ export default defineNuxtConfig({
             domain: config.domain,
         },
     },
-    content: {},
     tailwindcss: {
         viewer: false,
     },

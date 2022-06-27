@@ -3,7 +3,7 @@
         <div class="custom-container flex justify-between px-4 py-4">
             <div>
                 <div class="flex">
-                    <img class="h-10" src="~/assets/svg/logo.svg" />
+                    <img class="h-10" src="/logo.png" />
                     <span>SIDEELEC</span>
                 </div>
             </div>
