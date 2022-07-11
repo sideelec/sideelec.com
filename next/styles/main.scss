@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.custom-container {
+    @apply mx-auto max-w-7xl;
+}
+
+.bg-gradient {
+    @apply bg-gradient-to-tr from-primary-600 to-primary-500;
+}
+
+.text-gradient {
+    @apply bg-clip-text text-transparent;
+}
