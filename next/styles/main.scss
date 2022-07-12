@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+// html {
+//     @apply scroll-pt-16 scroll-smooth selection:bg-primary-500 selection:text-white;
+// }
+
 .custom-container {
     @apply mx-auto max-w-7xl;
 }
