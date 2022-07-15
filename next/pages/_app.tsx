@@ -4,31 +4,36 @@ import type { AppProps } from "next/app";
 import PlausibleProvider from "next-plausible";
 import env from "~/lib/env";
 import Link from "next/link";
-import TransitionLayout from "~/components/TransitionLayout";
+import { Transition } from "@headlessui/react";
+import { useRouter } from "next/router";
+import Banner from "~/components/Banner";
+import Header from "~/components/Header";
+import Footer from "~/components/Footer";
 
 function MyApp({ Component, pageProps }: AppProps) {
+    const router = useRouter();
     return (
-        <TransitionLayout>
-            <PlausibleProvider domain={env.url}>
+        <PlausibleProvider domain={env.url}>
+            <Transition
+                key={router.route}
+                as="div"
+                appear={true}
+                show={true}
+                enter="transition-opacity duration-300 ease-out"
+                enterFrom="opacity-0"
+                enterTo="opacity-100"
+                leave="transition-opacity duration-300 ease-in"
+                leaveFrom="opacity-100"
+                leaveTo="opacity-0"
+            >
                 <div className="flex min-h-screen flex-col">
-                    <div className="sticky top-0 bg-white shadow">
-                        <div className="space-x-3">
-                            <Link href="/">
-                                <a className="text-blue-500 underline visited:text-violet-500">
-                                    Home
-                                </a>
-                            </Link>
-                            <Link href="/about">
-                                <a className="text-blue-500 underline visited:text-violet-500">
-                                    About
-                                </a>
-                            </Link>
-                        </div>
-                    </div>
+                    <Banner />
+                    <Header />
                     <Component {...pageProps} />
+                    <Footer />
                 </div>
-            </PlausibleProvider>
-        </TransitionLayout>
+            </Transition>
+        </PlausibleProvider>
     );
 }
 
