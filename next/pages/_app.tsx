@@ -1,9 +1,8 @@
 import "~/styles/main.scss";
-import "@fontsource/barlow";
+import "~/lib/fonts";
 import type { AppProps } from "next/app";
 import PlausibleProvider from "next-plausible";
 import env from "~/lib/env";
-import Link from "next/link";
 import { Transition } from "@headlessui/react";
 import { useRouter } from "next/router";
 import Banner from "~/components/Banner";
