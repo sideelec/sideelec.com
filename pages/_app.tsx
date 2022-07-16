@@ -1,5 +1,6 @@
 import '~/styles/main.scss'
 import '~/lib/fonts'
+import '~/lib/swiper'
 import type { AppProps } from 'next/app'
 import { useRouter } from 'next/router'
 import PlausibleProvider from 'next-plausible'
