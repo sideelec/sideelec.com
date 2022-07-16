@@ -31,7 +31,7 @@ const About = () => {
                 excepturi cupiditate. Rem mollitia iste incidunt maxime.
             </p>
         </div>
-    );
-};
+    )
+}
 
-export default About;
+export default About

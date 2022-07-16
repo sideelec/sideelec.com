@@ -3,5 +3,5 @@
 // };
 // export default PrivacyPolicy;
 
-import Placeholder from "~/components/Placeholder";
-export default () => Placeholder("Politique de confidentialité");
+import Placeholder from '~/components/Placeholder'
+export default () => Placeholder('Politique de confidentialité')

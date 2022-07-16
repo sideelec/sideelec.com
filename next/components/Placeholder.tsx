@@ -1,3 +1,3 @@
-const Placeholder = (title: string) => <div>{title}</div>;
+const Placeholder = (title: string) => <div>{title}</div>
 
-export default Placeholder;
+export default Placeholder

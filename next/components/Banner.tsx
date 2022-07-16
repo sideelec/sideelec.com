@@ -1,8 +1,8 @@
-import Link from "next/link";
-import globalContent from "~/content/global.json";
+import Link from 'next/link'
+import globalContent from '~/content/global.json'
 
 const Banner = () => {
-    const { banner } = globalContent;
+    const { banner } = globalContent
     return (
         <Link href={banner.link} tabIndex={0}>
             <a
@@ -16,7 +16,7 @@ const Banner = () => {
                 </div>
             </a>
         </Link>
-    );
-};
+    )
+}
 
-export default Banner;
+export default Banner

@@ -1,9 +1,9 @@
-import Link from "next/link";
-import globalContent from "~/content/global.json";
-import Button from "./Button";
+import Link from 'next/link'
+import Button from './Button'
+import globalContent from '~/content/global.json'
 
 const Contact = () => {
-    const { contact } = globalContent;
+    const { contact } = globalContent
     return (
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-2">
             <div
@@ -33,7 +33,7 @@ const Contact = () => {
                 </div>
             </div>
         </div>
-    );
-};
+    )
+}
 
-export default Contact;
+export default Contact

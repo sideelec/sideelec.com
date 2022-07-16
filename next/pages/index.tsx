@@ -1,11 +1,11 @@
-import type { NextPage } from "next";
-import Link from "next/link";
-import Button from "~/components/Button";
-import homeContent from "~/content/home.json";
+import type { NextPage } from 'next'
+import Link from 'next/link'
+import Button from '~/components/Button'
+import homeContent from '~/content/home.json'
 
 const Home: NextPage = () => {
     const Hero = () => {
-        const { hero } = homeContent;
+        const { hero } = homeContent
         return (
             <div className="bg-gradient-to-tr from-gray-900 to-gray-800 py-24">
                 <div className="custom-container flex items-center justify-between px-4">
@@ -32,8 +32,8 @@ const Home: NextPage = () => {
                     <div>IMAGE</div>
                 </div>
             </div>
-        );
-    };
+        )
+    }
     return (
         <div>
             <Hero />
@@ -43,7 +43,7 @@ const Home: NextPage = () => {
                 {/* <Partners /> */}
             </div>
         </div>
-    );
-};
+    )
+}
 
-export default Home;
+export default Home

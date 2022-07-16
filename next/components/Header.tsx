@@ -1,37 +1,36 @@
-import { Popover, Transition } from "@headlessui/react";
-import { MenuIcon, XIcon } from "@heroicons/react/outline";
-import clsx from "clsx";
-import Link from "next/link";
-import { useRouter } from "next/router";
-import React from "react";
-import { useEffect } from "react";
-import Button from "./Button";
+import { Popover, Transition } from '@headlessui/react'
+import { MenuIcon, XIcon } from '@heroicons/react/outline'
+import clsx from 'clsx'
+import Link from 'next/link'
+import { useRouter } from 'next/router'
+import React from 'react'
+import Button from './Button'
 
 const links: { name: string; href: string }[] = [
     {
-        name: "Accueil",
-        href: "/",
+        name: 'Accueil',
+        href: '/',
     },
     {
-        name: "Solutions",
-        href: "/solutions",
+        name: 'Solutions',
+        href: '/solutions',
     },
     {
-        name: "Services",
-        href: "/services",
+        name: 'Services',
+        href: '/services',
     },
     {
         name: "L'entreprise",
-        href: "/l-entreprise",
+        href: '/l-entreprise',
     },
     {
-        name: "Nouveautés",
-        href: "/nouveautes",
+        name: 'Nouveautés',
+        href: '/nouveautes',
     },
-];
+]
 
 const Header = () => {
-    const { pathname } = useRouter();
+    const { pathname } = useRouter()
 
     return (
         <header className="sticky top-0 border-b border-gray-200 bg-white">
@@ -39,7 +38,12 @@ const Header = () => {
                 <div className="custom-container flex items-center justify-between px-4 py-3">
                     <div className="flex items-center space-x-6">
                         <div className="flex items-center space-x-2">
-                            <img className="h-10" src="/logo.png" />
+                            <img
+                                src="/logo.png"
+                                alt="SIDEELEC logo"
+                                height={40}
+                                width={40}
+                            />
                             <span className="text-2xl font-bold text-primary-500">
                                 SIDEELEC
                             </span>
@@ -94,13 +98,13 @@ const Header = () => {
                                             <a
                                                 onClick={() => close()}
                                                 className={clsx(
-                                                    "animated-underline relative inline-flex items-center space-x-1 font-medium text-gray-500",
-                                                    (href === "/"
-                                                        ? pathname === "/"
+                                                    'animated-underline relative inline-flex items-center space-x-1 font-medium text-gray-500',
+                                                    (href === '/'
+                                                        ? pathname === '/'
                                                         : pathname.startsWith(
                                                               href
                                                           )) &&
-                                                        "bg-gradient text-gradient font-bold"
+                                                        'bg-gradient text-gradient font-bold'
                                                 )}
                                             >
                                                 {name}
@@ -114,7 +118,7 @@ const Header = () => {
                 </Transition>
             </Popover>
         </header>
-    );
-};
+    )
+}
 
-export default Header;
+export default Header

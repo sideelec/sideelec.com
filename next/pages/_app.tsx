@@ -1,16 +1,16 @@
-import "~/styles/main.scss";
-import "~/lib/fonts";
-import type { AppProps } from "next/app";
-import PlausibleProvider from "next-plausible";
-import env from "~/lib/env";
-import { Transition } from "@headlessui/react";
-import { useRouter } from "next/router";
-import Banner from "~/components/Banner";
-import Header from "~/components/Header";
-import Footer from "~/components/Footer";
+import '~/styles/main.scss'
+import '~/lib/fonts'
+import type { AppProps } from 'next/app'
+import { useRouter } from 'next/router'
+import PlausibleProvider from 'next-plausible'
+import { Transition } from '@headlessui/react'
+import env from '~/lib/env'
+import Banner from '~/components/Banner'
+import Header from '~/components/Header'
+import Footer from '~/components/Footer'
 
 function MyApp({ Component, pageProps }: AppProps) {
-    const router = useRouter();
+    const router = useRouter()
     return (
         <PlausibleProvider domain={env.url}>
             <Transition
@@ -33,7 +33,7 @@ function MyApp({ Component, pageProps }: AppProps) {
                 </div>
             </Transition>
         </PlausibleProvider>
-    );
+    )
 }
 
-export default MyApp;
+export default MyApp
