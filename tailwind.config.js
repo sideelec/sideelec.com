@@ -13,9 +13,13 @@ const red = {
     900: "#b71c1c",
 };
 
+/** @type {import('tailwindcss').Config} */
 module.exports = {
-    darkMode: "class",
-    content: ["content/**/*.{md,yml,json,json5,csv}"],
+    content: [
+        "./pages/**/*.{js,ts,jsx,tsx}",
+        "./components/**/*.{js,ts,jsx,tsx}",
+        "./lib/**/*.{js,ts,jsx,tsx}",
+    ],
     theme: {
         extend: {
             fontFamily: {
