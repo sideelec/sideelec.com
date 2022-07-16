@@ -1,5 +1,7 @@
-const LegalNotices = () => {
-    return <div></div>;
-};
+// const LegalNotices = () => {
+//     return <div></div>;
+// };
+// export default LegalNotices;
 
-export default LegalNotices;
+import Placeholder from "~/components/Placeholder";
+export default () => Placeholder("Mentions légales");

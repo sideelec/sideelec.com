@@ -1,5 +1,7 @@
-const PrivacyPolicy = () => {
-    return <div></div>;
-};
+// const PrivacyPolicy = () => {
+//     return <div></div>;
+// };
+// export default PrivacyPolicy;
 
-export default PrivacyPolicy;
+import Placeholder from "~/components/Placeholder";
+export default () => Placeholder("Politique de confidentialité");
