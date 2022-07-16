@@ -89,7 +89,7 @@ const Home: NextPage = () => {
         }
 
         return (
-            <div className="bg-gradient-to-tr from-gray-900 to-gray-800 py-24">
+            <div className="bg-gradient-to-tr from-gray-900 to-gray-800 py-12">
                 <div className="custom-container flex items-center justify-between px-4">
                     <div>
                         <h1 className="text-6xl font-bold uppercase text-white">
