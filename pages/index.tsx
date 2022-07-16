@@ -9,6 +9,7 @@ import {
     ArrowNarrowLeftIcon,
     ArrowNarrowRightIcon,
 } from '@heroicons/react/outline'
+import { useMeta } from '~/hooks/meta'
 
 const Home: NextPage = () => {
     const Hero = () => {
@@ -22,13 +23,13 @@ const Home: NextPage = () => {
             }: {
                 product: typeof products[0]
             }) => (
-                <div className="grid h-full grid-cols-4 bg-gray-700">
+                <div className="grid h-full grid-cols-3 bg-gray-700">
                     <img
                         src={image}
                         alt={title}
                         className="h-full rounded-l-md object-cover"
                     />
-                    <div className="col-span-3 p-4 text-white">
+                    <div className="col-span-2 p-4 text-white">
                         <h3 className="mb-1 text-2xl font-semibold">{title}</h3>
                         <p className="mb-6 text-gray-300">{description}</p>
                         <p className="text-gray-200">{content}</p>
@@ -112,8 +113,12 @@ const Home: NextPage = () => {
             </div>
         )
     }
+
+    const { Meta } = useMeta({ title: 'Accueil' })
+
     return (
         <div>
+            <Meta />
             <Hero />
             <div id="content">
                 {/* <Solutions /> */}
