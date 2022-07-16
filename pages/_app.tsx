@@ -14,25 +14,25 @@ const App = ({ Component, pageProps }: AppProps) => {
     const router = useRouter()
     return (
         <PlausibleProvider domain={env.url}>
-            <Transition
-                key={router.route}
-                as="div"
-                appear={true}
-                show={true}
-                enter="transition-opacity duration-300 ease-out"
-                enterFrom="opacity-0"
-                enterTo="opacity-100"
-                leave="transition-opacity duration-300 ease-in"
-                leaveFrom="opacity-100"
-                leaveTo="opacity-0"
-            >
-                <div className="flex min-h-screen flex-col">
-                    <Banner />
-                    <Header />
+            <div className="flex min-h-screen flex-col">
+                <Banner />
+                <Header />
+                <Transition
+                    key={router.route}
+                    as="div"
+                    appear={true}
+                    show={true}
+                    enter="transition-opacity duration-300 ease-out"
+                    enterFrom="opacity-0"
+                    enterTo="opacity-100"
+                    leave="transition-opacity duration-300 ease-in"
+                    leaveFrom="opacity-100"
+                    leaveTo="opacity-0"
+                >
                     <Component {...pageProps} />
-                    <Footer />
-                </div>
-            </Transition>
+                </Transition>
+                <Footer />
+            </div>
         </PlausibleProvider>
     )
 }
