@@ -9,7 +9,7 @@ import {
     ArrowNarrowLeftIcon,
     ArrowNarrowRightIcon,
 } from '@heroicons/react/outline'
-import { useMeta } from '~/hooks/meta'
+import { useMeta } from '~/hooks/useMeta'
 
 const Home: NextPage = () => {
     const Hero = () => {
@@ -38,13 +38,11 @@ const Home: NextPage = () => {
             )
 
             return (
-                <div className="">
+                <div>
                     <Swiper
                         spaceBetween={0}
                         slidesPerView={1}
-                        onSlideChange={() => console.log('slide change')}
-                        onSwiper={(swiper) => console.log(swiper)}
-                        className="aspect-video max-w-xl rounded-md border-2 border-gray-500"
+                        className="aspect-video max-w-md rounded-md border-2 border-gray-500 lg:max-w-lg xl:max-w-xl"
                         loop
                         navigation={{
                             prevEl: '.swiper-prev-button',
@@ -86,8 +84,8 @@ const Home: NextPage = () => {
         }
 
         return (
-            <div className="bg-gradient-to-tr from-gray-900 to-gray-800 py-12">
-                <div className="custom-container flex items-center justify-between px-4">
+            <div className="bg-gray-800 py-12">
+                <div className="custom-container flex flex-col items-center justify-between space-y-4 px-4 lg:flex-row lg:space-x-4 lg:space-y-0">
                     <div>
                         <h1 className="text-6xl font-bold uppercase text-white">
                             {hero.title}
