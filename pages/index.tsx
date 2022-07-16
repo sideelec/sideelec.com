@@ -54,7 +54,7 @@ const Home: NextPage = () => {
                         }}
                         modules={[Navigation, Pagination, Autoplay]}
                         autoplay={{
-                            delay: 2500,
+                            delay: 5000,
                             disableOnInteraction: false,
                         }}
                     >
@@ -63,10 +63,6 @@ const Home: NextPage = () => {
                                 <Slide product={product} />
                             </SwiperSlide>
                         ))}
-                        {/* <SwiperSlide>Slide 1</SwiperSlide> */}
-                        {/* <SwiperSlide>Slide 2</SwiperSlide> */}
-                        {/* <SwiperSlide>Slide 3</SwiperSlide> */}
-                        {/* <SwiperSlide>Slide 4</SwiperSlide> */}
                     </Swiper>
                     <div className="mt-4 flex justify-between">
                         <button
