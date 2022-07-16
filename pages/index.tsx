@@ -9,7 +9,6 @@ import {
     ArrowNarrowLeftIcon,
     ArrowNarrowRightIcon,
 } from '@heroicons/react/outline'
-import Image from 'next/image'
 
 const Home: NextPage = () => {
     const Hero = () => {
