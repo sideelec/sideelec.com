@@ -10,7 +10,7 @@ import Banner from '~/components/Banner'
 import Header from '~/components/Header'
 import Footer from '~/components/Footer'
 
-function MyApp({ Component, pageProps }: AppProps) {
+const App = ({ Component, pageProps }: AppProps) => {
     const router = useRouter()
     return (
         <PlausibleProvider domain={env.url}>
@@ -37,4 +37,4 @@ function MyApp({ Component, pageProps }: AppProps) {
     )
 }
 
-export default MyApp
+export default App
