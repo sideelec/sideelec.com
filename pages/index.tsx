@@ -29,6 +29,17 @@ const Home: NextPage = () => {
                             </Link>
                         </div>
                     </div>
+                    {/* TODO: swiper */}
+                    {/* 
+                    features:
+                    - navigation
+                    - pagination
+                    - infinite loop
+                    - fade
+                    - autoplay
+                    - lazy loading
+                    - autoheight (?)
+                    */}
                     <div>IMAGE</div>
                 </div>
             </div>
