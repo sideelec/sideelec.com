@@ -22,9 +22,9 @@ const Button = forwardRef<any, Props>(
     ) => {
         const typeClass = {
             primary:
-                'bg-gradient text-white hover:from-primary-500 hover:to-primary-400',
-            gray: 'bg-gray-700 text-gray-100 hover:bg-gray-600',
-            white: 'bg-white text-gray-700 hover:bg-gray-50',
+                'bg-gradient text-white hover:from-primary-500 hover:to-primary-400 focus:ring-primary-200',
+            gray: 'bg-gray-700 text-gray-100 hover:bg-gray-600 focus:ring-gray-500',
+            white: 'bg-white text-gray-700 hover:bg-gray-50 focus:ring-primary-500',
         }[type]
         const sizeClass = {
             small: 'py-1 px-4',
@@ -37,7 +37,7 @@ const Button = forwardRef<any, Props>(
             <Element
                 ref={ref}
                 className={clsx(
-                    'rounded-lg font-medium uppercase transition-all',
+                    'rounded-lg font-medium uppercase transition-all focus:outline-none focus:ring-2',
                     typeClass,
                     sizeClass,
                     className
