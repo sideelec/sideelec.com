@@ -59,27 +59,27 @@
     "services": {
         "title": "Nos services",
         "button": "En savoir plus",
-        "description": "lorem ipsum",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget lacus ullamcorper, euismod felis nec, aliquet dolor. Suspendisse euismod est enim, at pharetra leo semper placerat. Proin finibus fringilla velit porttitor accumsan.",
         "cards": [
             {
                 "title": "Audit et avant-vente",
                 "description": "lorem ipsum",
-                "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"
+                "icon": "BadgeCheckIcon"
             },
             {
                 "title": "Audit et avant-vente",
                 "description": "lorem ipsum",
-                "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"
+                "icon": "BadgeCheckIcon"
             },
             {
                 "title": "Audit et avant-vente",
                 "description": "lorem ipsum",
-                "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"
+                "icon": "BadgeCheckIcon"
             },
             {
                 "title": "Audit et avant-vente",
                 "description": "lorem ipsum",
-                "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80"
+                "icon": "BadgeCheckIcon"
             }
         ]
     },

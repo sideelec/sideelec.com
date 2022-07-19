@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import Hero from '~/components/sections/Home/Hero'
+import Services from '~/components/sections/Home/Services'
 import Solutions from '~/components/sections/Home/Solutions'
 
 import { useMeta } from '~/hooks/useMeta'
@@ -13,7 +14,7 @@ const Home: NextPage = () => {
             <Hero />
             <div id="content">
                 <Solutions />
-                {/* <Services /> */}
+                <Services />
                 {/* <Partners /> */}
             </div>
         </div>
