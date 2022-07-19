@@ -1807,7 +1807,7 @@ process-nextick-args@~2.0.0:
   resolved "https://registry.npmjs.org/process-nextick-args/-/process-nextick-args-2.0.1.tgz#7820d9b16120cc55ca9ae7792680ae7dba6d7fe2"
   integrity sha512-3ouUOpQhtgrbOa17J7+uxOTpITYWaGP7/AhoR3+A+/1e9skrzelGi/dXzEYyvbxubEF6Wn2ypscTKiKJFFn1ag==
 
-prop-types@^15.6.0, prop-types@^15.8.1:
+prop-types@^15.8.1:
   version "15.8.1"
   resolved "https://registry.npmjs.org/prop-types/-/prop-types-15.8.1.tgz#67d87bf1a694f48435cf332c24af10214a3140b5"
   integrity sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==
@@ -1848,20 +1848,6 @@ react-is@^16.13.1:
   version "16.13.1"
   resolved "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
-
-react-render-to-json@0.0.6:
-  version "0.0.6"
-  resolved "https://registry.npmjs.org/react-render-to-json/-/react-render-to-json-0.0.6.tgz#3d04ad156d58d64390089102554b8030f3c2a4fa"
-  integrity sha512-fMfqnDjO2HHeg3k4dVierDxVQUymaTfWlsL9pfkSNHpXhGey1J/T8CDsVhN+xjswFYSM30zL0dLBiGHqGoAWWg==
-
-react-svg-morph@^0.2.1:
-  version "0.2.1"
-  resolved "https://registry.npmjs.org/react-svg-morph/-/react-svg-morph-0.2.1.tgz#fdcb8a53d646cd8166e60b5ceb8f60d585d8c724"
-  integrity sha512-Z4TBpO0tXbfnligZiEQlHwU+XRe0HkJjQAmrNEENFgAlF58dKN5Pit5NOWp3JqYB7PmZ3tnnTul7T/cW9dH14g==
-  dependencies:
-    prop-types "^15.6.0"
-    react-render-to-json "0.0.6"
-    svgpath "^2.1.0"
 
 react@18.2.0:
   version "18.2.0"
@@ -2128,11 +2114,6 @@ supports-preserve-symlinks-flag@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/supports-preserve-symlinks-flag/-/supports-preserve-symlinks-flag-1.0.0.tgz#6eda4bd344a3c94aea376d4cc31bc77311039e09"
   integrity sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==
-
-svgpath@^2.1.0:
-  version "2.5.0"
-  resolved "https://registry.npmjs.org/svgpath/-/svgpath-2.5.0.tgz#d57434641d9aa9abae02a4038ebf281fa3005b10"
-  integrity sha512-o/vohwqjUO9nDAh4rcjE3KaW/v//At8UJu2LJMybXidf5QLQLVA4bxH0//4YCsr+1H4Gw1Wi/Jc62ynzSBYidw==
 
 swiper@^8.3.1:
   version "8.3.1"

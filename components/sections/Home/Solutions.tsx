@@ -1,7 +1,5 @@
-import { ArrowRightIcon, ExternalLinkIcon } from '@heroicons/react/outline'
+import { ArrowRightIcon } from '@heroicons/react/outline'
 import Link from 'next/link'
-import { useState } from 'react'
-import { MorphReplace } from 'react-svg-morph'
 import Button from '~/components/Button'
 import HeroIcon from '~/components/HeroIcon'
 import homeContent from '~/content/home.json'
@@ -15,43 +13,29 @@ interface CardProps {
 }
 
 const Card = ({ icon, title, description, precision, link }: CardProps) => {
-    const [hovered, setHovered] = useState(false)
     return (
-        <div
-            onMouseOver={() => setHovered(true)}
-            onMouseLeave={() => setHovered(false)}
-            className="flex flex-col justify-between rounded-lg border border-gray-200 bg-gradient-to-tr from-gray-200 to-gray-100 p-6 transition-transform hover:scale-105"
-        >
-            <div className="space-y-2">
-                <div className="flex items-start justify-between">
-                    <div className="bg-gradient inline-block rounded-lg p-2">
-                        <HeroIcon name={icon} className="h-7 w-7 text-white" />
+        <Link href={link}>
+            <a className="group flex flex-col justify-between rounded-lg border border-gray-200 bg-gradient-to-tr from-gray-200 to-gray-100 p-6 transition-transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-primary-100">
+                <div className="space-y-2">
+                    <div className="flex items-start justify-between">
+                        <div className="bg-gradient inline-block rounded-lg p-2">
+                            <HeroIcon
+                                name={icon}
+                                className="h-7 w-7 text-white"
+                            />
+                        </div>
+                        <ArrowRightIcon className="h-5 w-5 text-gray-700 transition-transform group-hover:-rotate-45 group-hover:scale-150" />
                     </div>
-                    <Link href={link}>
-                        <a className="rounded-md p-1 transition-colors hover:bg-gray-200">
-                            <MorphReplace width={20} height={20}>
-                                {hovered ? (
-                                    <ExternalLinkIcon
-                                        key="over"
-                                        className="h-5 w-5 text-gray-700"
-                                    />
-                                ) : (
-                                    <ArrowRightIcon
-                                        key="leave"
-                                        className="h-5 w-5 text-gray-700"
-                                    />
-                                )}
-                            </MorphReplace>
-                        </a>
-                    </Link>
+                    <h3 className="text-xl font-semibold text-gray-700">
+                        {title}
+                    </h3>
+                    <p className="text-gray-500">{description}</p>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-700">{title}</h3>
-                <p className="text-gray-500">{description}</p>
-            </div>
-            <p className="mt-3 text-sm font-semibold text-gray-500">
-                {precision}
-            </p>
-        </div>
+                <p className="mt-3 text-sm font-semibold text-gray-500">
+                    {precision}
+                </p>
+            </a>
+        </Link>
     )
 }
 
