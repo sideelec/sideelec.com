@@ -86,6 +86,12 @@
     "partners": {
         "title": "Nos partenaires",
         "description": "lorem ipsum",
-        "images": ["/logo.png", "/logo.png"]
+        "cards": [
+            { "image": "/images/partners/nugelec.png", "name": "Nugelec" },
+            { "image": "/images/partners/slat.png", "name": "Slat" },
+            { "image": "/images/partners/ateis.png", "name": "Ateis" },
+            { "image": "/images/partners/eaton.png", "name": "Eaton" },
+            { "image": "/images/partners/kaufel.jpg", "name": "Kaufel" }
+        ]
     }
 }

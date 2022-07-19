@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import Hero from '~/components/sections/Home/Hero'
+import Partners from '~/components/sections/Home/Partners'
 import Services from '~/components/sections/Home/Services'
 import Solutions from '~/components/sections/Home/Solutions'
 
@@ -15,7 +16,7 @@ const Home: NextPage = () => {
             <div id="content">
                 <Solutions />
                 <Services />
-                {/* <Partners /> */}
+                <Partners />
             </div>
         </div>
     )
