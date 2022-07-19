@@ -15,6 +15,7 @@ export const useMeta = (newMeta: UseMetaProps = {}) => {
 
     const meta = {
         description: defaultMeta.description,
+        // eslint-disable-next-line no-unused-vars
         ...(({ title, ...rest }) => rest)(newMeta),
     }
 

@@ -49,8 +49,8 @@ const Header = () => {
                             </span>
                         </div>
                         <div className="hidden items-center space-x-4 md:flex">
-                            {links.map(({ href, name }) => (
-                                <Link href={href} key={href}>
+                            {links.map(({ href, name }, index) => (
+                                <Link href={href} key={index}>
                                     <a className="font-medium text-gray-500 transition-colors hover:text-gray-600">
                                         {name}
                                     </a>
@@ -93,8 +93,8 @@ const Header = () => {
                                     />
                                 </Popover.Button>
                                 <div className="flex flex-col items-center justify-center space-y-6 text-xl">
-                                    {links.map(({ href, name }) => (
-                                        <Link key={href} href={href}>
+                                    {links.map(({ href, name }, index) => (
+                                        <Link key={index} href={href}>
                                             <a
                                                 onClick={() => close()}
                                                 className={clsx(

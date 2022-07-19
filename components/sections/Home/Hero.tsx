@@ -9,16 +9,14 @@ import {
     ArrowNarrowRightIcon,
 } from '@heroicons/react/outline'
 
-const Slide = ({
-    product: { title, description, image, content },
-}: {
-    product: {
-        title: string
-        description: string
-        image: string
-        content: string
-    }
-}) => (
+interface SlideProps {
+    title: string
+    description: string
+    image: string
+    content: string
+}
+
+const Slide = ({ title, description, image, content }: SlideProps) => (
     <div className="relative grid h-full grid-cols-3 bg-gray-700">
         <div className="bg-gradient absolute top-2 left-2 rounded-md p-2 py-1 text-sm text-white">
             Nouveautés !
@@ -59,9 +57,9 @@ const Slider = () => {
                     disableOnInteraction: false,
                 }}
             >
-                {products.map((product) => (
-                    <SwiperSlide key={product.title}>
-                        <Slide product={product} />
+                {products.map((product, index) => (
+                    <SwiperSlide key={index}>
+                        <Slide {...product} />
                     </SwiperSlide>
                 ))}
             </Swiper>

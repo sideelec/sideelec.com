@@ -10,45 +10,45 @@
     "solutions": {
         "title": "Nos solutions",
         "button": "Tout voir",
-        "description": "lorem ipsum",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget lacus ullamcorper, euismod felis nec, aliquet dolor. Suspendisse euismod est enim, at pharetra leo semper placerat. Proin finibus fringilla velit porttitor accumsan.",
         "cards": [
             {
-                "icon": "xxx",
+                "icon": "BadgeCheckIcon",
+                "title": "Sécurité incendie",
+                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget lacus ullamcorper, euismod felis nec, aliquet dolor.",
+                "precision": "Chargeurs, batteries, onduleurs...",
+                "link": "/solutions/securite-incendie"
+            },
+            {
+                "icon": "BookOpenIcon",
                 "title": "Sécurité incendie",
                 "description": "lorem ipsum",
                 "precision": "Chargeurs, batteries, onduleurs...",
                 "link": "/solutions/securite-incendie"
             },
             {
-                "icon": "xxx",
+                "icon": "BellIcon",
                 "title": "Sécurité incendie",
                 "description": "lorem ipsum",
                 "precision": "Chargeurs, batteries, onduleurs...",
                 "link": "/solutions/securite-incendie"
             },
             {
-                "icon": "xxx",
+                "icon": "CalendarIcon",
                 "title": "Sécurité incendie",
                 "description": "lorem ipsum",
                 "precision": "Chargeurs, batteries, onduleurs...",
                 "link": "/solutions/securite-incendie"
             },
             {
-                "icon": "xxx",
+                "icon": "ChatIcon",
                 "title": "Sécurité incendie",
                 "description": "lorem ipsum",
                 "precision": "Chargeurs, batteries, onduleurs...",
                 "link": "/solutions/securite-incendie"
             },
             {
-                "icon": "xxx",
-                "title": "Sécurité incendie",
-                "description": "lorem ipsum",
-                "precision": "Chargeurs, batteries, onduleurs...",
-                "link": "/solutions/securite-incendie"
-            },
-            {
-                "icon": "xxx",
+                "icon": "CloudIcon",
                 "title": "Sécurité incendie",
                 "description": "lorem ipsum",
                 "precision": "Chargeurs, batteries, onduleurs...",
