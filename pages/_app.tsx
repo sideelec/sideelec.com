@@ -2,7 +2,6 @@ import '~/styles/main.scss'
 import '~/lib/fonts'
 import '~/lib/swiper'
 import type { AppProps } from 'next/app'
-import { useRouter } from 'next/router'
 import PlausibleProvider from 'next-plausible'
 import { Transition } from '@headlessui/react'
 import env from '~/lib/env'
@@ -10,6 +9,8 @@ import Banner from '~/components/Banner'
 import Header from '~/components/Header'
 import Footer from '~/components/Footer'
 import { MetaContextValue, MetaContext } from '~/context/meta'
+import { useScrollRestoration } from '~/hooks/useScrollRestoration'
+import React from 'react'
 
 const meta: MetaContextValue = {
     description: 'description',
@@ -18,8 +19,8 @@ const meta: MetaContextValue = {
     titleTemplate: (title) => (title ? `${title} - SIDEELEC` : 'SIDEELEC'),
 }
 
-const App = ({ Component, pageProps }: AppProps) => {
-    const router = useRouter()
+const App = ({ Component, pageProps, router }: AppProps) => {
+    useScrollRestoration(router)
     return (
         <MetaContext.Provider value={meta}>
             <PlausibleProvider domain={env.url}>

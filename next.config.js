@@ -7,16 +7,7 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 const nextConfig = {
     reactStrictMode: true,
     swcMinify: true,
-    experimental: {
-        images: {
-            remotePatterns: [
-                {
-                    protocol: 'https',
-                    hostname: '*',
-                },
-            ],
-        },
-    },
+    experimental: {},
 }
 
 module.exports = withPlugins([[withBundleAnalyzer], nextConfig])
