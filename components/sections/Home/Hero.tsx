@@ -66,14 +66,14 @@ const Slider = () => {
             <div className="mt-4 flex justify-between">
                 <button
                     type="button"
-                    className="swiper-prev-button transition-all hover:scale-90"
+                    className="swiper-prev-button rounded-xl transition-all hover:scale-90 focus:outline-none focus:ring focus:ring-gray-600"
                     aria-label="Slide précédent"
                 >
                     <ArrowNarrowLeftIcon className="h-8 w-8 text-gray-300" />
                 </button>
                 <button
                     type="button"
-                    className="swiper-next-button transition-all hover:scale-90"
+                    className="swiper-next-button rounded-xl transition-all hover:scale-90 focus:outline-none focus:ring focus:ring-gray-600"
                     aria-label="Slide suivant"
                 >
                     <ArrowNarrowRightIcon className="h-8 w-8 text-gray-300" />

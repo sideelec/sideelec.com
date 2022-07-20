@@ -26,7 +26,7 @@ const Footer = () => {
                         <Link href="https://florian-lefebvre.dev">
                             <a
                                 target="_blank"
-                                className="font-semibold text-primary-500 underline"
+                                className="rounded-md font-semibold text-primary-500 underline focus:outline-none focus:ring focus:ring-primary-500"
                             >
                                 Florian LEFEBVRE
                             </a>
@@ -36,7 +36,7 @@ const Footer = () => {
                     <div className="flex items-center space-x-4">
                         {legalLinks.map(({ href, name }) => (
                             <Link key={href} href={href}>
-                                <a className="text-sm text-gray-500 transition-colors hover:text-gray-600">
+                                <a className="rounded-md text-sm text-gray-500 transition-colors hover:text-gray-600 focus:outline-none focus:ring focus:ring-primary-500">
                                     {name}
                                 </a>
                             </Link>

@@ -38,7 +38,7 @@ const Header = () => {
                 <div className="custom-container flex items-center justify-between px-4 py-3">
                     <div className="flex items-center space-x-6">
                         <Link href="/">
-                            <a className="flex items-center space-x-2">
+                            <a className="flex items-center space-x-2 rounded-md focus:outline-none focus:ring focus:ring-primary-500">
                                 <img
                                     src="/logo.png"
                                     alt="SIDEELEC logo"
@@ -53,7 +53,7 @@ const Header = () => {
                         <div className="hidden items-center space-x-4 md:flex">
                             {links.map(({ href, name }, index) => (
                                 <Link href={href} key={index}>
-                                    <a className="font-medium text-gray-500 transition-colors hover:text-gray-600">
+                                    <a className="rounded-md font-medium text-gray-500 transition-colors hover:text-gray-600 focus:outline-none focus:ring focus:ring-primary-500">
                                         {name}
                                     </a>
                                 </Link>
@@ -87,7 +87,7 @@ const Header = () => {
                     >
                         {({ close }) => (
                             <>
-                                <Popover.Button className="absolute top-4 right-4 inline-flex items-center justify-center rounded-md bg-gray-200 p-1.5 text-gray-800 transition-all hover:bg-gray-300 focus:ring-2 focus:ring-primary-500">
+                                <Popover.Button className="absolute top-4 right-4 inline-flex items-center justify-center rounded-md bg-gray-200 p-1.5 text-gray-800 transition-all hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-primary-500">
                                     <span className="sr-only">Close menu</span>
                                     <XIcon
                                         className="h-5 w-5"
@@ -100,7 +100,7 @@ const Header = () => {
                                             <a
                                                 onClick={() => close()}
                                                 className={clsx(
-                                                    'animated-underline relative inline-flex items-center space-x-1 font-medium text-gray-500',
+                                                    'relative inline-flex items-center space-x-1 rounded-md font-medium text-gray-500 transition-colors hover:text-gray-600 focus:outline-none focus:ring focus:ring-primary-500',
                                                     (href === '/'
                                                         ? pathname === '/'
                                                         : pathname.startsWith(
