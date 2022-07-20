@@ -37,17 +37,19 @@ const Header = () => {
             <Popover className="relative">
                 <div className="custom-container flex items-center justify-between px-4 py-3">
                     <div className="flex items-center space-x-6">
-                        <div className="flex items-center space-x-2">
-                            <img
-                                src="/logo.png"
-                                alt="SIDEELEC logo"
-                                height={40}
-                                width={40}
-                            />
-                            <span className="text-2xl font-bold text-primary-500">
-                                SIDEELEC
-                            </span>
-                        </div>
+                        <Link href="/">
+                            <a className="flex items-center space-x-2">
+                                <img
+                                    src="/logo.png"
+                                    alt="SIDEELEC logo"
+                                    height={40}
+                                    width={40}
+                                />
+                                <span className="text-2xl font-bold text-primary-500">
+                                    SIDEELEC
+                                </span>
+                            </a>
+                        </Link>
                         <div className="hidden items-center space-x-4 md:flex">
                             {links.map(({ href, name }, index) => (
                                 <Link href={href} key={index}>
