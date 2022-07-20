@@ -1,0 +1,37 @@
+{
+    "title": "Contact",
+    "description": "lorem ipsum",
+    "image": "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2850&q=80",
+    "cards": [
+        {
+            "icon": "PhoneIcon",
+            "title": "Par téléphone",
+            "description": "Du lundi au vendredi, de 8h00 à 12h00 et de 13h30 à 18h00 au <strong>05 61 13 16 16</strong>.",
+            "link": {
+                "url": "tel:0561131616",
+                "text": "Nous appeler",
+                "external": true
+            }
+        },
+        {
+            "icon": "AtSymbolIconOutline",
+            "title": "Par email",
+            "description": "Nous répondrons sur les horaires d'ouverture de nos bureaux à <strong>contact@sideelec.com</strong>.",
+            "link": {
+                "url": "mailto:contact@sideelec.com",
+                "text": "Nous écrire",
+                "external": true
+            }
+        },
+        {
+            "icon": "ChatAltIcon",
+            "title": "Via le formulaire",
+            "description": "Contactez-nous directement sur notre site à l'aide du formulaire de contact.",
+            "link": {
+                "url": "#form",
+                "text": "Voir le formulaire",
+                "external": false
+            }
+        }
+    ]
+}

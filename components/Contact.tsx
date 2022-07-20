@@ -12,7 +12,7 @@ const Contact = () => {
             >
                 <div className="bg-gradient absolute inset-0 z-0 opacity-60"></div>
             </div>
-            <div className="bg-gradient-to-tr from-gray-900 to-gray-800 px-6 py-16 md:col-span-2 lg:col-span-1">
+            <div className="bg-gray-800 px-6 py-16 md:col-span-2 lg:col-span-1">
                 <div className="max-w-xl">
                     <div className="space-y-2">
                         <div className="bg-gradient text-gradient font-medium">
