@@ -46,7 +46,7 @@ const Solutions = () => {
             <div className="custom-container py-24 px-4">
                 <div>
                     <div className="flex items-center justify-between space-x-4">
-                        <h2 className="bg-gradient text-gradient mb-6 text-5xl font-bold uppercase">
+                        <h2 className="mb-6 text-5xl font-bold uppercase text-gray-800">
                             {solutions.title}
                         </h2>
                         <Link href="/solutions" passHref>
