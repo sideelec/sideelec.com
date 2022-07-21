@@ -6,7 +6,7 @@ import contactContent from '~/content/contact.json'
 
 const Iframe = () => {
     return (
-        <div className="relative min-h-[24rem] overflow-hidden rounded-lg shadow">
+        <div className="relative min-h-[24rem] overflow-hidden rounded-lg border border-gray-200">
             <iframe
                 width="100%"
                 height="100%"
