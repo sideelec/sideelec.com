@@ -4,7 +4,7 @@ import '~/lib/swiper'
 import type { AppProps } from 'next/app'
 import PlausibleProvider from 'next-plausible'
 import { Transition } from '@headlessui/react'
-import env from '~/lib/env'
+import { publicEnv as env } from '~/lib/env'
 import Banner from '~/components/Banner'
 import Header from '~/components/Header'
 import Footer from '~/components/Footer'
@@ -23,7 +23,7 @@ const App = ({ Component, pageProps, router }: AppProps) => {
     useScrollRestoration(router)
     return (
         <MetaContext.Provider value={meta}>
-            <PlausibleProvider domain={env.url}>
+            <PlausibleProvider domain={env.domain}>
                 <div className="flex min-h-screen flex-col">
                     <Banner />
                     <Header />
