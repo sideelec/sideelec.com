@@ -99,7 +99,7 @@ const Hero = () => {
                     <div className="mt-8 flex flex-col items-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0 md:flex-col md:space-x-0 md:space-y-4 lg:flex-row lg:space-y-0 lg:space-x-4">
                         <Link href="/#content" passHref>
                             <Button
-                                component="a"
+                                as="a"
                                 className="w-full text-center lg:w-auto lg:text-left"
                             >
                                 {hero.cta.knowMore}
@@ -107,8 +107,8 @@ const Hero = () => {
                         </Link>
                         <Link href="/contact" passHref>
                             <Button
-                                component="a"
-                                type="gray"
+                                as="a"
+                                color="gray"
                                 className="w-full text-center lg:w-auto lg:text-left"
                             >
                                 {hero.cta.contact}

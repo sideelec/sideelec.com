@@ -26,7 +26,7 @@ const Contact = () => {
                         </div>
                     </div>
                     <Link href="/contact" passHref>
-                        <Button component="a" className="mt-6 inline-block">
+                        <Button as="a" className="mt-6 inline-block">
                             {contact.contact}
                         </Button>
                     </Link>

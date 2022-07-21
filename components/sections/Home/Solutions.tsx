@@ -50,7 +50,7 @@ const Solutions = () => {
                             {solutions.title}
                         </h2>
                         <Link href="/solutions" passHref>
-                            <Button component="a" size="small">
+                            <Button as="a" size="small">
                                 {solutions.button}
                             </Button>
                         </Link>

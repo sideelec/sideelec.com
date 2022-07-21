@@ -32,7 +32,7 @@ const Services = () => {
                             {services.title}
                         </h2>
                         <Link href="/services" passHref>
-                            <Button component="a" size="small" type="white">
+                            <Button as="a" size="small" color="white">
                                 {services.button}
                             </Button>
                         </Link>

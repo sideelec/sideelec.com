@@ -21,11 +21,10 @@ const Iframe = () => {
                 passHref
             >
                 <Button
-                    component="a"
-                    // @ts-ignore
+                    as="a"
                     target="_blank"
                     className="absolute top-2 right-2 flex items-center capitalize"
-                    type="gray"
+                    color="gray"
                     size="small"
                 >
                     <span>Consulter</span>

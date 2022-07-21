@@ -40,7 +40,7 @@ const Error: NextPage<Props> = ({ statusCode }) => {
                         </Button>
 
                         <Link href="/" passHref>
-                            <Button component="a" type="gray">
+                            <Button as="a" color="gray">
                                 Accueil
                             </Button>
                         </Link>

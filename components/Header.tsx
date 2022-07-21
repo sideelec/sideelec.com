@@ -62,7 +62,7 @@ const Header = () => {
                     </div>
                     <div className="flex items-center space-x-2">
                         <Link href="/contact" passHref>
-                            <Button component="a" size="small">
+                            <Button as="a" size="small">
                                 CONTACT
                             </Button>
                         </Link>
