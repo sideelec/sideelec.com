@@ -15,7 +15,7 @@
                 }
             },
             {
-                "icon": "AtSymbolIconOutline",
+                "icon": "MailIcon",
                 "title": "Par email",
                 "description": "Nous répondrons sur les horaires d'ouverture de nos bureaux à <strong>contact@sideelec.com</strong>.",
                 "link": {
@@ -69,5 +69,9 @@
                 "hours": "Fermé"
             }
         ]
+    },
+    "form": {
+        "title": "Formulaire",
+        "description": "lorem ipsum"
     }
 }

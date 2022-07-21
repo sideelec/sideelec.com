@@ -23,7 +23,7 @@ const Iframe = () => {
                 <Button
                     as="a"
                     target="_blank"
-                    className="absolute top-2 right-2 flex items-center capitalize"
+                    className="absolute top-2 right-2 capitalize"
                     color="gray"
                     size="small"
                 >

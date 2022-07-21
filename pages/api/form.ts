@@ -1,14 +1,7 @@
 import { NextApiResponse, NextApiRequest } from 'next'
 import { createTransport } from 'nodemailer'
-import { InferType, object, string } from 'yup'
 import { privateEnv as env } from '~/lib/env'
-
-const bodySchema = object({
-    name: string().required(),
-    subject: string().required(),
-    message: string().required(),
-    email: string().email().required(),
-})
+import { ContactSchema, contactSchema } from '~/lib/validation'
 
 export default async function handler(
     req: NextApiRequest,
@@ -19,7 +12,7 @@ export default async function handler(
     }
 
     try {
-        await bodySchema.validate(req.body)
+        await contactSchema.validate(req.body)
     } catch (err) {
         return res.status(400).json({
             error: err,
@@ -38,8 +31,7 @@ export default async function handler(
         },
     })
 
-    const { subject, email, message, name }: InferType<typeof bodySchema> =
-        req.body
+    const { subject, email, message, name }: ContactSchema = req.body
 
     transporter.sendMail({
         from: user,

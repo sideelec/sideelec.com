@@ -11,6 +11,7 @@ import Footer from '~/components/Footer'
 import { MetaContextValue, MetaContext } from '~/context/meta'
 import { useScrollRestoration } from '~/hooks/useScrollRestoration'
 import React from 'react'
+import { Toaster } from 'react-hot-toast'
 
 const meta: MetaContextValue = {
     description: 'description',
@@ -25,6 +26,7 @@ const App = ({ Component, pageProps, router }: AppProps) => {
         <MetaContext.Provider value={meta}>
             <PlausibleProvider domain={env.domain}>
                 <div className="flex min-h-screen flex-col">
+                    <Toaster position="bottom-right" reverseOrder={true} />
                     <Banner />
                     <Header />
                     <Transition
