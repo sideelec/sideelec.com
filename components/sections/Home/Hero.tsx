@@ -100,7 +100,7 @@ const Hero = () => {
                         <Button
                             as={Link}
                             href="/#content"
-                            className="w-full text-center lg:w-auto lg:text-left"
+                            className="w-full justify-center lg:w-auto lg:justify-start"
                         >
                             {hero.cta.knowMore}
                         </Button>
@@ -108,7 +108,7 @@ const Hero = () => {
                             as={Link}
                             href="/contact"
                             color="gray"
-                            className="w-full text-center lg:w-auto lg:text-left"
+                            className="w-full justify-center lg:w-auto lg:justify-start"
                         >
                             {hero.cta.contact}
                         </Button>

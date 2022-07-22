@@ -49,15 +49,13 @@ const Button: ButtonComponent = forwardRef(
             <Component
                 ref={ref}
                 className={clsx(
-                    'inline-flex items-center rounded-lg font-medium uppercase transition-all focus:outline-none focus:ring-2',
+                    className,
+                    'flex items-center rounded-lg font-medium uppercase transition-all focus:outline-none focus:ring-2',
                     colorClass,
                     sizeClass,
                     disabled && '!bg-gray-300 !bg-[image:none] !text-white',
                     loading && '!bg-opacity-75',
-                    disabled &&
-                        loading &&
-                        '!cursor-not-allowed !bg-opacity-100',
-                    className
+                    disabled && loading && '!cursor-not-allowed !bg-opacity-100'
                 )}
                 {...{ disabled, ...rest }}
             >
