@@ -29,16 +29,15 @@ const Card = ({ icon, title, description, link }: CardProps) => {
                     dangerouslySetInnerHTML={{ __html: description }}
                 />
             </div>
-            <Link href={link.url}>
-                <a
-                    className="group mt-auto block rounded-b-lg border-t border-gray-100 bg-gray-50 p-6 font-semibold focus:outline-none focus:ring-2 focus:ring-gray-300"
-                    target={link.external ? '_blank' : undefined}
-                >
-                    <div className="bg-gradient text-gradient flex items-center">
-                        <span className="text-lg">{link.text}</span>
-                        <ArrowRightIcon className="ml-2 h-4 w-4 text-primary-500 transition-all group-hover:ml-4" />
-                    </div>
-                </a>
+            <Link
+                href={link.url}
+                className="group mt-auto block rounded-b-lg border-t border-gray-100 bg-gray-50 p-6 font-semibold focus:outline-none focus:ring-2 focus:ring-gray-300"
+                target={link.external ? '_blank' : undefined}
+            >
+                <div className="bg-gradient text-gradient flex items-center">
+                    <span className="text-lg">{link.text}</span>
+                    <ArrowRightIcon className="ml-2 h-4 w-4 text-primary-500 transition-all group-hover:ml-4" />
+                </div>
             </Link>
         </div>
     )

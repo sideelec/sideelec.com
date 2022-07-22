@@ -23,22 +23,23 @@ const Footer = () => {
                     <div className="mt-2 text-sm text-gray-500 md:mt-0">
                         &copy; {new Date().getFullYear()} SIDEELEC. Tous droits
                         réservés. Site réalisé par{' '}
-                        <Link href="https://florian-lefebvre.dev">
-                            <a
-                                target="_blank"
-                                className="rounded-md font-semibold text-primary-500 underline focus:outline-none focus:ring focus:ring-primary-500"
-                            >
-                                Florian LEFEBVRE
-                            </a>
+                        <Link
+                            href="https://florian-lefebvre.dev"
+                            target="_blank"
+                            className="rounded-md font-semibold text-primary-500 underline focus:outline-none focus:ring focus:ring-primary-500"
+                        >
+                            Florian LEFEBVRE
                         </Link>
                         .
                     </div>
                     <div className="flex items-center space-x-4">
                         {legalLinks.map(({ href, name }) => (
-                            <Link key={href} href={href}>
-                                <a className="rounded-md text-sm text-gray-500 transition-colors hover:text-gray-600 focus:outline-none focus:ring focus:ring-primary-500">
-                                    {name}
-                                </a>
+                            <Link
+                                key={href}
+                                href={href}
+                                className="rounded-md text-sm text-gray-500 transition-colors hover:text-gray-600 focus:outline-none focus:ring focus:ring-primary-500"
+                            >
+                                {name}
                             </Link>
                         ))}
                     </div>

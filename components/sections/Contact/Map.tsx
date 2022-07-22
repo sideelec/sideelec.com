@@ -15,22 +15,17 @@ const Iframe = () => {
                 src="https://www.openstreetmap.org/export/embed.html?bbox=1.421012878417969%2C43.608674481668174%2C1.4611816406250002%2C43.62952125581191&amp;layer=mapnik&amp;marker=43.619092600020785%2C1.4410834999999906"
                 style={{ border: 0 }}
             ></iframe>
-            <Link
+            <Button
+                as={Link}
                 href="https://www.openstreetmap.org/?mlat=43.6191&amp;mlon=1.4411#map=15/43.6191/1.4411"
-                className="absolute top-2 right-2 bg-white"
-                passHref
+                target="_blank"
+                className="absolute top-2 right-2 capitalize"
+                color="gray"
+                size="small"
             >
-                <Button
-                    as="a"
-                    target="_blank"
-                    className="absolute top-2 right-2 capitalize"
-                    color="gray"
-                    size="small"
-                >
-                    <span>Consulter</span>
-                    <ExternalLinkIcon className="ml-2 -mr-1 h-4 w-4" />
-                </Button>
-            </Link>
+                <span>Consulter</span>
+                <ExternalLinkIcon className="ml-2 -mr-1 h-4 w-4" />
+            </Button>
         </div>
     )
 }

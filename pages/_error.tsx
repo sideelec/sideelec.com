@@ -39,11 +39,9 @@ const Error: NextPage<Props> = ({ statusCode }) => {
                             Page précédente
                         </Button>
 
-                        <Link href="/" passHref>
-                            <Button as="a" color="gray">
-                                Accueil
-                            </Button>
-                        </Link>
+                        <Button as={Link} href="/" color="gray">
+                            Accueil
+                        </Button>
                     </div>
                 </div>
             </div>

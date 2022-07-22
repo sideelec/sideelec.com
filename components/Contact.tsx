@@ -25,11 +25,13 @@ const Contact = () => {
                             {contact.description}
                         </div>
                     </div>
-                    <Link href="/contact" passHref>
-                        <Button as="a" className="mt-6 inline-block">
-                            {contact.contact}
-                        </Button>
-                    </Link>
+                    <Button
+                        as={Link}
+                        href="/contact"
+                        className="mt-6 inline-block"
+                    >
+                        {contact.contact}
+                    </Button>
                 </div>
             </div>
         </div>
