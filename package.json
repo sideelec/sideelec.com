@@ -1,6 +1,8 @@
 {
-    "name": "next",
+    "name": "sideelecdotcom",
     "version": "0.1.0",
+    "author": "Florian LEFEBVRE",
+    "license": "GPL-3.0",
     "private": true,
     "scripts": {
         "dev": "next dev",
@@ -14,6 +16,7 @@
     "pre-commit": [
         "lint"
     ],
+    "browserslist": "defaults, not ie <= 11",
     "dependencies": {
         "@fontsource/barlow": "^4.5.7",
         "@headlessui/react": "^1.6.6",
