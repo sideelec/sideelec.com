@@ -10,54 +10,78 @@ import {
 } from '@heroicons/react/outline'
 import Image from 'next/image'
 import { BlurredImage } from '~/types/home'
+import { ArrowRightIcon } from '@heroicons/react/solid'
 
 interface HeroProps {
     blurredImages: BlurredImage[]
 }
 
 interface SlideProps {
+    slug: string
     title: string
     description: string
     imageProps: BlurredImage
-    content: string
 }
 
-const Slide = ({ title, description, imageProps, content }: SlideProps) => {
+const Slide = ({ slug, title, description, imageProps }: SlideProps) => {
     return (
-        <div className="relative grid h-full grid-cols-3 bg-gray-700">
-            <Image
-                {...imageProps}
-                alt={title}
-                placeholder="blur"
-                className="h-full rounded-l-md object-cover"
-            />
-            <div className="col-span-2 p-4 text-white">
-                <h3 className="mb-1 text-2xl font-semibold">{title}</h3>
-                <p className="mb-6 text-gray-300">{description}</p>
-                <p className="text-gray-200">{content}</p>
-            </div>
-        </div>
+        <>
+            <Link
+                href={`/nouveautes/${slug}`}
+                className="block bg-gray-700 p-2 sm:flex"
+                aria-label={`Voir ${title}`}
+            >
+                <div className="relative mb-4 flex w-full flex-shrink-0 items-stretch sm:mb-0 sm:mr-4 sm:w-56">
+                    <Image
+                        {...imageProps}
+                        alt={title}
+                        placeholder="blur"
+                        className="rounded-md object-cover"
+                    />
+                </div>
+                <div>
+                    <div className="bg-gradient text-gradient font-semibold tracking-wide">
+                        Nouveauté
+                    </div>
+                    <h4 className="mb-2 text-3xl font-semibold text-white">
+                        {title}
+                    </h4>
+                    <p className="mb-4 text-gray-200">{description}</p>
+                    <Button
+                        as="div"
+                        color="white"
+                        size="small"
+                        className="inline-flex"
+                    >
+                        <span>En savoir plus</span>
+                        <ArrowRightIcon className="ml-2 -mr-1 h-4 w-4" />
+                    </Button>
+                </div>
+            </Link>
+            <div className="h-7 bg-gray-800"></div>
+        </>
     )
 }
 
 const Slider: React.FC<HeroProps> = ({ blurredImages }) => {
-    const products = newsContent.products.map((product, index) => ({
-        title: product.title,
-        description: product.description,
-        imageProps: blurredImages[index],
-        content: product.content,
-    }))
+    const products = newsContent.products.map(
+        ({ slug, title, description }, index) => ({
+            slug,
+            title,
+            description,
+            imageProps: blurredImages[index],
+        })
+    )
 
     return (
         <>
-            <div className="mb-2 text-lg font-medium text-gray-300">
-                Nouveautés !
-            </div>
             <Swiper
+                autoHeight={true}
                 spaceBetween={0}
                 slidesPerView={1}
-                className="aspect-video max-w-lg rounded-md border-2 border-gray-600 md:max-w-xl lg:max-w-lg xl:max-w-xl"
+                className="max-w-lg rounded-md border-2 border-gray-600 bg-gray-700 sm:max-w-xl lg:max-w-lg xl:max-w-xl"
                 loop
+                effect="fade"
                 navigation={{
                     prevEl: '.swiper-prev-button',
                     nextEl: '.swiper-next-button',

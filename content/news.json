@@ -3,30 +3,35 @@
     "description": "Voici les dernières nouveautés",
     "products": [
         {
+            "slug": "0",
             "title": "Product 0",
-            "description": "This is a description",
+            "description": "This is a description his is a descrip scriptionhis  is a descriptionhis is a descriptionhis is a description descriptionhis is a descriptionhis is a descriptionhis is a descriptionhis is a descriptionhis is a description descriptionhis is a descriptionhis is a descriptionhis is a descriptionhis is a descriptionhis is a description",
             "image": "https://picsum.photos/id/1/1920/1080/",
             "content": "This is a content"
         },
         {
+            "slug": "1",
             "title": "Product 1",
             "description": "This is a description",
             "image": "https://picsum.photos/id/2/1920/1080/",
             "content": "This is a content"
         },
         {
+            "slug": "2",
             "title": "Product 2",
             "description": "This is a description",
             "image": "https://picsum.photos/id/3/1920/1080/",
             "content": "This is a content"
         },
         {
+            "slug": "3",
             "title": "Product 3",
             "description": "This is a description",
             "image": "https://picsum.photos/id/4/1920/1080/",
             "content": "This is a content"
         },
         {
+            "slug": "4",
             "title": "Product 4",
             "description": "This is a description",
             "image": "https://picsum.photos/id/5/1920/1080/",

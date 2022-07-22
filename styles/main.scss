@@ -22,3 +22,10 @@ html {
     --swiper-pagination-color: theme('colors.primary.500');
     --swiper-pagination-bullet-inactive-color: theme('colors.white');
 }
+
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom,
+.swiper-pagination-fraction {
+    bottom: 4px !important;
+}
