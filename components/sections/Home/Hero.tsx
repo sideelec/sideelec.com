@@ -25,9 +25,6 @@ interface SlideProps {
 const Slide = ({ title, description, imageProps, content }: SlideProps) => {
     return (
         <div className="relative grid h-full grid-cols-3 bg-gray-700">
-            <div className="bg-gradient absolute top-2 left-2 z-10 rounded-md p-2 py-1 text-sm text-white">
-                Nouveautés !
-            </div>
             <Image
                 {...imageProps}
                 alt={title}
@@ -54,11 +51,14 @@ const Slider: React.FC<HeroProps> = ({ blurredImages }) => {
     )
 
     return (
-        <div className="max-w-full">
+        <>
+            <div className="mb-2 text-lg font-medium text-gray-300">
+                Nouveautés !
+            </div>
             <Swiper
                 spaceBetween={0}
                 slidesPerView={1}
-                className="aspect-video max-w-lg rounded-md border-2 border-gray-500 md:max-w-sm lg:max-w-lg xl:max-w-xl"
+                className="aspect-video max-w-lg rounded-md border-2 border-gray-600 md:max-w-xl lg:max-w-lg xl:max-w-xl"
                 loop
                 navigation={{
                     prevEl: '.swiper-prev-button',
@@ -97,7 +97,7 @@ const Slider: React.FC<HeroProps> = ({ blurredImages }) => {
                     <ArrowNarrowRightIcon className="h-8 w-8 text-gray-300" />
                 </button>
             </div>
-        </div>
+        </>
     )
 }
 
@@ -105,36 +105,51 @@ const Hero: React.FC<HeroProps> = ({ blurredImages }) => {
     const { hero } = homeContent
 
     return (
-        <div className="bg-gray-800 py-12">
-            <div className="custom-container flex flex-col items-center justify-between space-y-16 px-4 md:flex-row md:space-x-8 md:space-y-0">
-                <div>
-                    <h1 className="text-6xl font-bold uppercase text-white">
-                        {hero.title}
-                    </h1>
-                    <p className="mt-4 max-w-lg text-lg text-gray-400">
-                        {hero.description}
-                    </p>
-                    <div className="mt-8 flex flex-col items-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0 md:flex-col md:space-x-0 md:space-y-4 lg:flex-row lg:space-y-0 lg:space-x-4">
-                        <Button
-                            as={Link}
-                            href="/#content"
-                            className="w-full justify-center lg:w-auto lg:justify-start"
-                        >
-                            {hero.cta.knowMore}
-                        </Button>
-                        <Button
-                            as={Link}
-                            href="/contact"
-                            color="gray"
-                            className="w-full justify-center lg:w-auto lg:justify-start"
-                        >
-                            {hero.cta.contact}
-                        </Button>
+        <>
+            <div className="bg-gray-800 py-10 sm:pt-16 lg:pt-8 lg:pb-14">
+                <div className="custom-container px-4">
+                    <div className="lg:grid lg:grid-cols-2 lg:gap-8">
+                        <div className="mx-auto max-w-lg sm:max-w-xl sm:text-center lg:flex lg:items-center lg:text-left">
+                            <div className="lg:py-24">
+                                <h1 className="mt-4 text-6xl font-bold text-white sm:mt-5 lg:mt-6">
+                                    <span className="block">SIDEELEC</span>
+                                </h1>
+                                <h2 className="bg-gradient text-gradient pb-3 text-3xl font-semibold sm:pb-5">
+                                    Sécurité informatique
+                                </h2>
+                                <p className="text-lg text-gray-300 md:text-xl">
+                                    Nous sommes spécialisés dans la distribution
+                                    de systèmes de sécurité depuis plus de 20
+                                    ans.
+                                </p>
+                                <div className="mt-10 grid gap-4 sm:mt-12 sm:grid-cols-2 md:flex">
+                                    <Button
+                                        as={Link}
+                                        href="/#content"
+                                        className="w-full justify-center lg:w-auto lg:justify-start"
+                                    >
+                                        {hero.cta.knowMore}
+                                    </Button>
+                                    <Button
+                                        as={Link}
+                                        href="/contact"
+                                        color="gray"
+                                        className="w-full justify-center lg:w-auto lg:justify-start"
+                                    >
+                                        {hero.cta.contact}
+                                    </Button>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="mt-12 flex items-center lg:mt-0">
+                            <div className="mx-auto max-w-full">
+                                <Slider blurredImages={blurredImages} />
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <Slider blurredImages={blurredImages} />
             </div>
-        </div>
+        </>
     )
 }
 
