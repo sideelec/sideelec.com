@@ -26,26 +26,26 @@ const App = ({ Component, pageProps, router }: AppProps) => {
     return (
         <MetaContext.Provider value={meta}>
             <PlausibleProvider domain={env.domain}>
-                <div className="flex min-h-screen flex-col">
-                    <Toaster position="bottom-right" reverseOrder={true} />
-                    <Banner />
-                    <Header />
-                    <Transition
-                        key={router.route}
-                        as="div"
-                        appear={true}
-                        show={true}
-                        enter="transition-opacity duration-300 ease-out"
-                        enterFrom="opacity-0"
-                        enterTo="opacity-100"
-                        leave="transition-opacity duration-300 ease-in"
-                        leaveFrom="opacity-100"
-                        leaveTo="opacity-0"
-                    >
+                <Toaster position="bottom-right" reverseOrder={true} />
+                <Banner />
+                <Header />
+                <Transition
+                    key={router.route}
+                    as="div"
+                    appear={true}
+                    show={true}
+                    enter="transition-opacity duration-300 ease-out"
+                    enterFrom="opacity-0"
+                    enterTo="opacity-100"
+                    leave="transition-opacity duration-300 ease-in"
+                    leaveFrom="opacity-100"
+                    leaveTo="opacity-0"
+                >
+                    <main>
                         <Component {...pageProps} />
-                    </Transition>
-                    <Footer />
-                </div>
+                    </main>
+                </Transition>
+                <Footer />
             </PlausibleProvider>
         </MetaContext.Provider>
     )

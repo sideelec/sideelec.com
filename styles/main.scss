@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-html {
-    @apply scroll-pt-16 scroll-smooth selection:bg-primary-500 selection:text-white;
+#__next {
+    display: contents;
 }
 
 .custom-container {
