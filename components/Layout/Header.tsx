@@ -41,6 +41,7 @@ const Header = () => {
                             href="/"
                             className="flex items-center space-x-2 rounded-md focus:outline-none focus:ring focus:ring-primary-500"
                         >
+                            {/* eslint-disable-next-line @next/next/no-img-element */}
                             <img
                                 src="/logo.png"
                                 alt="SIDEELEC logo"
