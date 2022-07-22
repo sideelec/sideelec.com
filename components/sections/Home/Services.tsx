@@ -31,11 +31,14 @@ const Services = () => {
                         <h2 className="mb-6 text-5xl font-bold uppercase text-white">
                             {services.title}
                         </h2>
-                        <Link href="/services" passHref>
-                            <Button as="a" size="small" color="white">
-                                {services.button}
-                            </Button>
-                        </Link>
+                        <Button
+                            as={Link}
+                            href="/services"
+                            size="small"
+                            color="white"
+                        >
+                            {services.button}
+                        </Button>
                     </div>
                     <p className="max-w-2xl text-base font-medium text-primary-100">
                         {services.description}
