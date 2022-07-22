@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import Button from './Button'
+import Button from '~/components/Button'
 import globalContent from '~/content/global.json'
 
 const Contact = () => {

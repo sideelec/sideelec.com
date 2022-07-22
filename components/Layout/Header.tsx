@@ -4,7 +4,7 @@ import clsx from 'clsx'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import React from 'react'
-import Button from './Button'
+import Button from '~/components/Button'
 
 const links: { name: string; href: string }[] = [
     {
