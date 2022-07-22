@@ -25,7 +25,7 @@ interface SlideProps {
 const Slide = ({ title, description, imageProps, content }: SlideProps) => {
     return (
         <div className="relative grid h-full grid-cols-3 bg-gray-700">
-            <div className="bg-gradient absolute top-2 left-2 rounded-md p-2 py-1 text-sm text-white">
+            <div className="bg-gradient absolute top-2 left-2 z-10 rounded-md p-2 py-1 text-sm text-white">
                 Nouveautés !
             </div>
             <Image
@@ -44,12 +44,14 @@ const Slide = ({ title, description, imageProps, content }: SlideProps) => {
 }
 
 const Slider: React.FC<HeroProps> = ({ blurredImages }) => {
-    const products = newsContent.products.map((product, index) => ({
-        title: product.title,
-        description: product.description,
-        imageProps: blurredImages[index],
-        content: product.content,
-    }))
+    const products = newsContent.products.map(
+        ({ title, description, content }, index) => ({
+            title,
+            description,
+            imageProps: blurredImages[index],
+            content,
+        })
+    )
 
     return (
         <div className="max-w-full">

@@ -12,23 +12,42 @@ import { useMeta } from '~/hooks/useMeta'
 import { BlurredImage } from '~/types/home'
 
 export const getStaticProps: GetStaticProps<{
-    blurredImages: BlurredImage[]
+    heroBlurredImages: BlurredImage[]
+    partnersBlurredImages: BlurredImage[]
 }> = async () => {
-    const rawImages = newsContent.products.map((product) => product.image)
-    const blurredImages = []
-    for (const image of rawImages) {
-        const { base64, img } = await getPlaiceholder(image)
-        blurredImages.push({ ...img, blurDataURL: base64 })
+    const handleHeroImages = async () => {
+        const rawImages = newsContent.products.map(({ image }) => image)
+        const blurredImages = []
+        for (const image of rawImages) {
+            const { base64, img } = await getPlaiceholder(image)
+            blurredImages.push({ ...img, blurDataURL: base64 })
+        }
+        return blurredImages
     }
+    const handlePartnersImages = async () => {
+        const rawImages = homeContent.partners.cards.map(({ image }) => image)
+        const blurredImages = []
+        for (const image of rawImages) {
+            const { base64, img } = await getPlaiceholder(image)
+            blurredImages.push({ ...img, blurDataURL: base64 })
+        }
+        return blurredImages
+    }
+
+    const heroBlurredImages = await handleHeroImages()
+    const partnersBlurredImages = await handlePartnersImages()
+
     return {
         props: {
-            blurredImages,
+            heroBlurredImages,
+            partnersBlurredImages,
         },
     }
 }
 
 const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
-    blurredImages,
+    heroBlurredImages,
+    partnersBlurredImages,
 }) => {
     const { hero } = homeContent
     const { Meta } = useMeta({
@@ -40,11 +59,11 @@ const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
         <>
             <Meta />
             <div>
-                <Hero blurredImages={blurredImages} />
+                <Hero blurredImages={heroBlurredImages} />
                 <div id="content">
                     <Solutions />
                     <Services />
-                    <Partners />
+                    <Partners blurredImages={partnersBlurredImages} />
                 </div>
             </div>
         </>
