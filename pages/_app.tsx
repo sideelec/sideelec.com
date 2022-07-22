@@ -1,3 +1,4 @@
+import 'focus-visible'
 import '~/styles/main.scss'
 import '~/lib/fonts'
 import '~/lib/swiper'

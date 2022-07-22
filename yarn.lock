@@ -1143,6 +1143,11 @@ flatted@^3.1.0:
   resolved "https://registry.npmjs.org/flatted/-/flatted-3.2.6.tgz#022e9218c637f9f3fc9c35ab9c9193f05add60b2"
   integrity sha512-0sQoMh9s0BYsm+12Huy/rkKxVu4R1+r96YX5cG44rHV0pQ6iC3Q+mkoMFaGWObMFYQxCVT+ssG1ksneA2MI9KQ==
 
+focus-visible@^5.2.0:
+  version "5.2.0"
+  resolved "https://registry.npmjs.org/focus-visible/-/focus-visible-5.2.0.tgz#3a9e41fccf587bd25dcc2ef045508284f0a4d6b3"
+  integrity sha512-Rwix9pBtC1Nuy5wysTmKy+UjbDJpIfg8eHjw0rjZ1mX4GNLz1Bmd16uDpI3Gk1i70Fgcs8Csg2lPm8HULFg9DQ==
+
 formik@^2.2.9:
   version "2.2.9"
   resolved "https://registry.npmjs.org/formik/-/formik-2.2.9.tgz#8594ba9c5e2e5cf1f42c5704128e119fc46232d0"
@@ -1966,6 +1971,13 @@ plaiceholder@^2.4.0:
     image-size "1.0.0"
     node-cache "5.1.2"
     node-fetch "2.6.7"
+
+postcss-focus-visible@^7.0.0:
+  version "7.0.0"
+  resolved "https://registry.npmjs.org/postcss-focus-visible/-/postcss-focus-visible-7.0.0.tgz#80b135af6caab0e47b21f1b8f08e2d6b04e52643"
+  integrity sha512-wlbgbeQmCLFl/L6BLzvqhegeaaGwyaQX6rz1Vmd/YlDFd6uHyUK7wflbDKP7w4Njc0Tog4s2duvq1jf7phor1w==
+  dependencies:
+    postcss-selector-parser "^6.0.10"
 
 postcss-import@^14.1.0:
   version "14.1.0"
