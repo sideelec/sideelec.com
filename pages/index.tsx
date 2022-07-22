@@ -17,7 +17,7 @@ export const getStaticProps: GetStaticProps<{
 }> = async () => {
     const handleHeroImages = async () => {
         const rawImages = newsContent.products.map(({ image }) => image)
-        const blurredImages = []
+        const blurredImages: BlurredImage[] = []
         for (const image of rawImages) {
             const { base64, img } = await getPlaiceholder(image)
             blurredImages.push({ ...img, blurDataURL: base64 })
@@ -26,7 +26,7 @@ export const getStaticProps: GetStaticProps<{
     }
     const handlePartnersImages = async () => {
         const rawImages = homeContent.partners.cards.map(({ image }) => image)
-        const blurredImages = []
+        const blurredImages: BlurredImage[] = []
         for (const image of rawImages) {
             const { base64, img } = await getPlaiceholder(image)
             blurredImages.push({ ...img, blurDataURL: base64 })
