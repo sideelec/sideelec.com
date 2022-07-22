@@ -28,7 +28,7 @@ const Contact = () => {
                     <Button
                         as={Link}
                         href="/contact"
-                        className="mt-6 inline-block"
+                        className="mt-6 inline-flex"
                     >
                         {contact.contact}
                     </Button>
