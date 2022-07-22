@@ -8,34 +8,48 @@ import {
     ArrowNarrowLeftIcon,
     ArrowNarrowRightIcon,
 } from '@heroicons/react/outline'
+import Image from 'next/image'
+import { BlurredImage } from '~/types/home'
+
+interface HeroProps {
+    blurredImages: BlurredImage[]
+}
 
 interface SlideProps {
     title: string
     description: string
-    image: string
+    imageProps: BlurredImage
     content: string
 }
 
-const Slide = ({ title, description, image, content }: SlideProps) => (
-    <div className="relative grid h-full grid-cols-3 bg-gray-700">
-        <div className="bg-gradient absolute top-2 left-2 rounded-md p-2 py-1 text-sm text-white">
-            Nouveautés !
+const Slide = ({ title, description, imageProps, content }: SlideProps) => {
+    return (
+        <div className="relative grid h-full grid-cols-3 bg-gray-700">
+            <div className="bg-gradient absolute top-2 left-2 rounded-md p-2 py-1 text-sm text-white">
+                Nouveautés !
+            </div>
+            <Image
+                {...imageProps}
+                alt={title}
+                placeholder="blur"
+                className="h-full rounded-l-md object-cover"
+            />
+            <div className="col-span-2 p-4 text-white">
+                <h3 className="mb-1 text-2xl font-semibold">{title}</h3>
+                <p className="mb-6 text-gray-300">{description}</p>
+                <p className="text-gray-200">{content}</p>
+            </div>
         </div>
-        <img
-            src={image}
-            alt={title}
-            className="h-full rounded-l-md object-cover"
-        />
-        <div className="col-span-2 p-4 text-white">
-            <h3 className="mb-1 text-2xl font-semibold">{title}</h3>
-            <p className="mb-6 text-gray-300">{description}</p>
-            <p className="text-gray-200">{content}</p>
-        </div>
-    </div>
-)
+    )
+}
 
-const Slider = () => {
-    const { products } = newsContent
+const Slider: React.FC<HeroProps> = ({ blurredImages }) => {
+    const products = newsContent.products.map((product, index) => ({
+        title: product.title,
+        description: product.description,
+        imageProps: blurredImages[index],
+        content: product.content,
+    }))
 
     return (
         <div className="max-w-full">
@@ -57,11 +71,13 @@ const Slider = () => {
                     disableOnInteraction: false,
                 }}
             >
-                {products.map((product, index) => (
-                    <SwiperSlide key={index}>
-                        <Slide {...product} />
-                    </SwiperSlide>
-                ))}
+                {products.map((product, index) => {
+                    return (
+                        <SwiperSlide key={index}>
+                            <Slide {...product} />
+                        </SwiperSlide>
+                    )
+                })}
             </Swiper>
             <div className="mt-4 flex justify-between">
                 <button
@@ -83,7 +99,7 @@ const Slider = () => {
     )
 }
 
-const Hero = () => {
+const Hero: React.FC<HeroProps> = ({ blurredImages }) => {
     const { hero } = homeContent
 
     return (
@@ -114,7 +130,7 @@ const Hero = () => {
                         </Button>
                     </div>
                 </div>
-                <Slider />
+                <Slider blurredImages={blurredImages} />
             </div>
         </div>
     )
