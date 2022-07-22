@@ -52,6 +52,7 @@ export type PolymorphicRef<C extends React.ElementType> =
  * A wrapper of `PolymorphicComponentProps` that also includes the `ref`
  * prop for the polymorphic component
  */
+
 export type PolymorphicComponentPropsWithRef<
     C extends React.ElementType,
     Props = {}
