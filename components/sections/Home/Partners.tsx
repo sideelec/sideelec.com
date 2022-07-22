@@ -1,35 +1,20 @@
 import homeContent from '~/content/home.json'
-import { BlurredImage } from '~/types/home'
-import Image from 'next/image'
-
-interface PartnersProps {
-    blurredImages: BlurredImage[]
-}
 
 interface CardProps {
     name: string
-    imageProps: BlurredImage
+    image: string
 }
 
-const Card = ({ name, imageProps }: CardProps) => {
+const Card = ({ name, image }: CardProps) => {
     return (
         <div className="flex h-20 justify-center rounded-md border border-gray-100 bg-white p-2">
-            <Image
-                {...imageProps}
-                placeholder="blur"
-                alt={`Logo ${name}`}
-                className="h-full object-contain"
-            />
+            <img src={image} alt={`Logo ${name}`} className="object-contain" />
         </div>
     )
 }
 
-const Partners: React.FC<PartnersProps> = ({ blurredImages }) => {
+const Partners = () => {
     const { partners } = homeContent
-    const cards = partners.cards.map(({ name }, index) => ({
-        name,
-        imageProps: blurredImages[index],
-    }))
     return (
         <div className="bg-gray-50">
             <div className="custom-container py-24 px-4">
@@ -42,7 +27,7 @@ const Partners: React.FC<PartnersProps> = ({ blurredImages }) => {
                     </p>
                 </div>
                 <div className="mt-9 grid gap-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-                    {cards.map((card, index) => (
+                    {partners.cards.map((card, index) => (
                         <Card key={index} {...card} />
                     ))}
                 </div>

@@ -41,14 +41,12 @@ const Slide = ({ title, description, imageProps, content }: SlideProps) => {
 }
 
 const Slider: React.FC<HeroProps> = ({ blurredImages }) => {
-    const products = newsContent.products.map(
-        ({ title, description, content }, index) => ({
-            title,
-            description,
-            imageProps: blurredImages[index],
-            content,
-        })
-    )
+    const products = newsContent.products.map((product, index) => ({
+        title: product.title,
+        description: product.description,
+        imageProps: blurredImages[index],
+        content: product.content,
+    }))
 
     return (
         <>
