@@ -94,7 +94,7 @@ const Solution: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
                         </div>
                         <div className="mt-12 sm:flex sm:min-w-0 sm:flex-1 sm:items-center sm:justify-end sm:space-x-6 sm:pb-1">
                             <div className="mt-6 min-w-0 flex-1 sm:hidden md:block">
-                                <h1 className="truncate text-6xl font-bold text-gray-900">
+                                <h1 className="truncate text-6xl font-bold leading-[normal] text-gray-900">
                                     {solution.title}
                                 </h1>
                             </div>
@@ -106,7 +106,7 @@ const Solution: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
                         </h1>
                     </div>
                 </div>
-                <div className="custom-container prose mt-8">
+                <div className="custom-container mt-8">
                     <p>{solution.description}</p>
                     <MdxLoader path={`/solutions/${solution.slug}`} />
                 </div>

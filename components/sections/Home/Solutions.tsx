@@ -16,7 +16,7 @@ const Card = ({ icon, title, description, preview, slug }: CardProps) => {
     return (
         <Link
             href={`/solutions/${slug}`}
-            className="group flex flex-col justify-between rounded-lg border border-gray-200 bg-gradient-to-tr from-gray-200 to-gray-100 p-6 transition-transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-primary-100"
+            className="group flex flex-col justify-between rounded-lg border border-gray-200 bg-gradient-to-tr from-gray-200 to-gray-100 p-6 transition-transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-primary-400"
         >
             <div className="space-y-2">
                 <div className="flex items-start justify-between">
