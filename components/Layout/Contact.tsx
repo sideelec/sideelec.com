@@ -25,11 +25,7 @@ const Contact = () => {
                             {contact.description}
                         </div>
                     </div>
-                    <Button
-                        as={Link}
-                        href="/contact"
-                        className="mt-6 inline-flex"
-                    >
+                    <Button as={Link} href="/contact" className="mt-6">
                         {contact.contact}
                     </Button>
                 </div>

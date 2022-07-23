@@ -7,55 +7,6 @@
             "contact": "Nous contacter"
         }
     },
-    "solutions": {
-        "title": "Nos solutions",
-        "button": "Tout voir",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget lacus ullamcorper, euismod felis nec, aliquet dolor. Suspendisse euismod est enim, at pharetra leo semper placerat. Proin finibus fringilla velit porttitor accumsan.",
-        "cards": [
-            {
-                "icon": "BadgeCheckIcon",
-                "title": "Sécurité incendie",
-                "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget lacus ullamcorper, euismod felis nec, aliquet dolor.",
-                "precision": "Chargeurs, batteries, onduleurs...",
-                "slug": "securite-incendie"
-            },
-            {
-                "icon": "BookOpenIcon",
-                "title": "Sécurité incendie",
-                "description": "lorem ipsum",
-                "precision": "Chargeurs, batteries, onduleurs...",
-                "slug": "securite-incendie"
-            },
-            {
-                "icon": "BellIcon",
-                "title": "Sécurité incendie",
-                "description": "lorem ipsum",
-                "precision": "Chargeurs, batteries, onduleurs...",
-                "slug": "securite-incendie"
-            },
-            {
-                "icon": "CalendarIcon",
-                "title": "Sécurité incendie",
-                "description": "lorem ipsum",
-                "precision": "Chargeurs, batteries, onduleurs...",
-                "slug": "securite-incendie"
-            },
-            {
-                "icon": "ChatIcon",
-                "title": "Sécurité incendie",
-                "description": "lorem ipsum",
-                "precision": "Chargeurs, batteries, onduleurs...",
-                "slug": "securite-incendie"
-            },
-            {
-                "icon": "CloudIcon",
-                "title": "Sécurité incendie",
-                "description": "lorem ipsum",
-                "precision": "Chargeurs, batteries, onduleurs...",
-                "slug": "securite-incendie"
-            }
-        ]
-    },
     "services": {
         "title": "Nos services",
         "button": "En savoir plus",

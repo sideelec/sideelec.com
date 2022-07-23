@@ -50,7 +50,7 @@ const Button: ButtonComponent = forwardRef(
                 ref={ref}
                 className={clsx(
                     className,
-                    'flex items-center rounded-lg font-medium uppercase transition-all focus:outline-none focus:ring-2',
+                    'inline-flex items-center rounded-lg font-medium uppercase transition-all focus:outline-none focus:ring-2',
                     colorClass,
                     sizeClass,
                     disabled && '!bg-gray-300 !bg-[image:none] !text-white',

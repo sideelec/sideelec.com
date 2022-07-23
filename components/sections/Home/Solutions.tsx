@@ -2,17 +2,17 @@ import { ArrowRightIcon } from '@heroicons/react/outline'
 import Link from 'next/link'
 import Button from '~/components/Button'
 import HeroIcon from '~/components/HeroIcon'
-import homeContent from '~/content/home.json'
+import solutionsContent from '~/content/solutions.json'
 
 interface CardProps {
     icon: string
     title: string
     description: string
-    precision: string
+    preview: string
     slug: string
 }
 
-const Card = ({ icon, title, description, precision, slug }: CardProps) => {
+const Card = ({ icon, title, description, preview, slug }: CardProps) => {
     return (
         <Link
             href={`/solutions/${slug}`}
@@ -29,14 +29,14 @@ const Card = ({ icon, title, description, precision, slug }: CardProps) => {
                 <p className="text-gray-500">{description}</p>
             </div>
             <p className="mt-3 text-sm font-semibold text-gray-500">
-                {precision}
+                {preview}
             </p>
         </Link>
     )
 }
 
 const Solutions = () => {
-    const { solutions } = homeContent
+    const solutions = solutionsContent
     return (
         <div className="">
             <div className="custom-container py-24">
@@ -54,7 +54,7 @@ const Solutions = () => {
                     </p>
                 </div>
                 <div className="mt-9 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                    {solutions.cards.map((card, index) => (
+                    {solutions.solutions.map((card, index) => (
                         <Card key={index} {...card} />
                     ))}
                 </div>

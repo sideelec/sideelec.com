@@ -47,12 +47,7 @@ const Slide = ({ slug, title, description, imageProps }: SlideProps) => {
                         {title}
                     </h4>
                     <p className="mb-4 text-gray-200">{description}</p>
-                    <Button
-                        as="div"
-                        color="white"
-                        size="small"
-                        className="inline-flex"
-                    >
+                    <Button as="div" color="white" size="small">
                         <span>En savoir plus</span>
                         <ArrowRightIcon className="ml-2 -mr-1 h-4 w-4" />
                     </Button>

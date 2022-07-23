@@ -1,12 +1,55 @@
 {
-    "title": "",
-    "description": "",
+    "title": "Nos solutions",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget lacus ullamcorper, euismod felis nec, aliquet dolor. Suspendisse euismod est enim, at pharetra leo semper placerat. Proin finibus fringilla velit porttitor accumsan.",
+    "button": "Tout voir",
     "solutions": [
         {
-            "icon": "CloudIcon",
+            "slug": "securite-incendie",
             "title": "Sécurité incendie",
             "description": "lorem ipsum",
-            "slug": "securite-incendie"
+            "icon": "BadgeCheckIcon",
+            "preview": "Chargeurs, batteries, onduleurs...",
+            "image": "https://images.unsplash.com/photo-1444628838545-ac4016a5418a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+        },
+        {
+            "slug": "eclairage-de-securite",
+            "title": "Eclairage de sécurité",
+            "description": "lorem ipsum",
+            "icon": "BookOpenIcon",
+            "preview": "Chargeurs, batteries, onduleurs...",
+            "image": "https://images.unsplash.com/photo-1444628838545-ac4016a5418a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+        },
+        {
+            "slug": "sante",
+            "title": "Santé",
+            "description": "lorem ipsum",
+            "icon": "BellIcon",
+            "preview": "Chargeurs, batteries, onduleurs...",
+            "image": "https://images.unsplash.com/photo-1444628838545-ac4016a5418a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+        },
+        {
+            "slug": "securite",
+            "title": "Sécurité",
+            "description": "lorem ipsum",
+            "icon": "CalendarIcon",
+            "preview": "Chargeurs, batteries, onduleurs...",
+            "image": "https://images.unsplash.com/photo-1444628838545-ac4016a5418a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+        },
+        {
+            "slug": "energie",
+            "title": "Energie",
+            "description": "lorem ipsum",
+            "icon": "ChatIcon",
+            "preview": "Chargeurs, batteries, onduleurs...",
+            "image": "https://images.unsplash.com/photo-1444628838545-ac4016a5418a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
+        },
+        {
+            "slug": "reseau",
+            "title": "Réseau",
+            "description": "lorem ipsum",
+            "icon": "CloudIcon",
+            "preview": "Chargeurs, batteries, onduleurs...",
+            "image": "https://images.unsplash.com/photo-1444628838545-ac4016a5418a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80"
         }
     ]
 }

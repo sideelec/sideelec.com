@@ -6,8 +6,12 @@ interface Props {
 }
 
 const MdxLoader: React.FC<Props> = ({ path, props }) => {
-    const Component = dynamic(() => import(`~/content/mdx${path}.mdx`))
-    return <Component {...props} />
+    try {
+        const Component = dynamic(() => import(`~/content/mdx${path}.mdx`))
+        return <Component {...props} />
+    } catch (e) {
+        return null
+    }
 }
 
 export default MdxLoader

@@ -5,7 +5,6 @@ import Services from '~/components/sections/Home/Services'
 import Solutions from '~/components/sections/Home/Solutions'
 import homeContent from '~/content/home.json'
 import newsContent from '~/content/news.json'
-// @ts-ignore
 import { getPlaiceholder } from 'plaiceholder'
 
 import { useMeta } from '~/hooks/useMeta'
