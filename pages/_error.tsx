@@ -23,7 +23,7 @@ const Error: NextPage<Props> = ({ statusCode }) => {
                     <p className="bg-gradient text-gradient text-base font-semibold uppercase tracking-wide">
                         Erreur {statusCode}
                     </p>
-                    <h1 className="mt-2 text-5xl font-bold uppercase text-gray-900">
+                    <h1 className="mt-2 text-5xl font-bold uppercase text-gray-800">
                         {statusCode === 404
                             ? 'Page introuvable'
                             : 'Problème serveur'}

@@ -49,7 +49,7 @@ const Content = () => {
                         key={index}
                         className="grid grid-cols-3 odd:bg-white even:bg-gray-50"
                     >
-                        <div className="whitespace-nowrap px-6 py-3 text-base font-medium text-gray-900">
+                        <div className="whitespace-nowrap px-6 py-3 text-base font-medium text-gray-800">
                             {day}
                         </div>
                         <div className="col-span-2 whitespace-nowrap px-6 py-3 text-base text-gray-600">
