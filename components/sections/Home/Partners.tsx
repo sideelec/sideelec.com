@@ -17,7 +17,7 @@ const Partners = () => {
     const { partners } = homeContent
     return (
         <div className="bg-gray-50">
-            <div className="custom-container py-24 px-4">
+            <div className="custom-container py-24">
                 <div>
                     <h2 className="mb-6 text-5xl font-bold uppercase text-gray-800">
                         {partners.title}

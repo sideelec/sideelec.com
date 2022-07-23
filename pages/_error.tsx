@@ -18,7 +18,7 @@ const Error: NextPage<Props> = ({ statusCode }) => {
     return (
         <>
             <Meta />
-            <div className="custom-container flex flex-grow flex-col px-4">
+            <div className="custom-container flex flex-grow flex-col">
                 <div className="my-auto flex-shrink-0 py-16 sm:py-32">
                     <p className="bg-gradient text-gradient text-base font-semibold uppercase tracking-wide">
                         Erreur {statusCode}

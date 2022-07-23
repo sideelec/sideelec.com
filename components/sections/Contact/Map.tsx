@@ -69,7 +69,7 @@ const Map = () => {
         <>
             <div className="h-12 bg-gradient-to-b from-white to-gray-50"></div>
             <div className="bg-gray-50">
-                <div className="custom-container px-4 py-12">
+                <div className="custom-container py-12">
                     <div className="grid gap-8 md:grid-cols-2">
                         {iframe}
                         <Content />

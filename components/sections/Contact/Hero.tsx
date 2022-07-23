@@ -52,7 +52,7 @@ const Hero = () => {
                 style={{ backgroundImage: `url('${hero.image}')` }}
             >
                 <div className="absolute inset-0 z-0 bg-black/80"></div>
-                <div className="custom-container relative px-4 pt-24 pb-48">
+                <div className="custom-container relative pt-24 pb-48">
                     <h1 className="text-6xl font-bold uppercase text-white">
                         {hero.title}
                     </h1>
@@ -62,7 +62,7 @@ const Hero = () => {
                 </div>
             </div>
             <div className="relative -mt-24 mb-24">
-                <div className="custom-container grid gap-6 px-4 md:grid-cols-2 lg:grid-cols-3">
+                <div className="custom-container grid gap-6 md:grid-cols-2 lg:grid-cols-3">
                     {hero.cards.map((card, index) => (
                         <Card {...card} key={index} />
                     ))}

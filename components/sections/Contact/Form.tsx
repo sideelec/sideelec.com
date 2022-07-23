@@ -215,7 +215,7 @@ const FormManagement = () => {
 const Form = () => {
     const { form } = contactContent
     return (
-        <div id="form" className="custom-container px-4 py-24">
+        <div id="form" className="custom-container py-24">
             <h2 className="mb-6 text-5xl font-bold uppercase text-gray-800">
                 {form.title}
             </h2>

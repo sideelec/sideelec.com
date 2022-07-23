@@ -129,7 +129,7 @@ const Hero: React.FC<HeroProps> = ({ blurredImages }) => {
     return (
         <>
             <div className="bg-gray-800 py-10 sm:pt-16 lg:pt-8 lg:pb-14">
-                <div className="custom-container px-4">
+                <div className="custom-container">
                     <div className="lg:grid lg:grid-cols-2 lg:gap-8">
                         <div className="mx-auto max-w-lg sm:max-w-xl sm:text-center lg:flex lg:items-center lg:text-left">
                             <div className="lg:py-24">
@@ -164,7 +164,7 @@ const Hero: React.FC<HeroProps> = ({ blurredImages }) => {
                             </div>
                         </div>
                         <div className="mt-12 flex items-center lg:mt-0">
-                            <div className="mx-auto max-w-full">
+                            <div className="mx-auto max-w-full lg:mr-0">
                                 <Slider blurredImages={blurredImages} />
                             </div>
                         </div>
