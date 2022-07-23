@@ -9,13 +9,13 @@ interface CardProps {
     title: string
     description: string
     precision: string
-    link: string
+    slug: string
 }
 
-const Card = ({ icon, title, description, precision, link }: CardProps) => {
+const Card = ({ icon, title, description, precision, slug }: CardProps) => {
     return (
         <Link
-            href={link}
+            href={`/solutions/${slug}`}
             className="group flex flex-col justify-between rounded-lg border border-gray-200 bg-gradient-to-tr from-gray-200 to-gray-100 p-6 transition-transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-primary-100"
         >
             <div className="space-y-2">

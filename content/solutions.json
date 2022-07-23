@@ -1,0 +1,12 @@
+{
+    "title": "",
+    "description": "",
+    "solutions": [
+        {
+            "icon": "CloudIcon",
+            "title": "Sécurité incendie",
+            "description": "lorem ipsum",
+            "slug": "securite-incendie"
+        }
+    ]
+}
