@@ -57,7 +57,13 @@ const Header = () => {
                                 <Link
                                     href={href}
                                     key={index}
-                                    className="rounded-md font-medium text-gray-500 transition-colors hover:text-gray-600 focus:outline-none focus:ring focus:ring-primary-500"
+                                    className={clsx(
+                                        'rounded-md font-medium text-gray-500 transition-colors hover:text-gray-600 focus:outline-none focus:ring focus:ring-primary-500',
+                                        (href === '/'
+                                            ? pathname === '/'
+                                            : pathname.startsWith(href)) &&
+                                            '!text-gray-700'
+                                    )}
                                 >
                                     {name}
                                 </Link>
