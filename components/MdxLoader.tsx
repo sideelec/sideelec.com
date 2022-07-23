@@ -9,7 +9,7 @@ const MdxLoader: React.FC<Props> = ({ path, props }) => {
     try {
         const Component = dynamic(() => import(`~/content/mdx${path}.mdx`))
         return (
-            <div className="prose md:prose-xl">
+            <div className="prose max-w-none md:prose-xl">
                 <Component {...props} />
             </div>
         )
