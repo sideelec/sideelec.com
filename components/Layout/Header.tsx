@@ -1,5 +1,5 @@
 import { Popover, Transition } from '@headlessui/react'
-import { MenuIcon, XIcon } from '@heroicons/react/outline'
+import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import clsx from 'clsx'
 import Link from 'next/link'
 import React, { useState } from 'react'
@@ -77,7 +77,7 @@ const Header = () => {
                         </Button>
                         <Popover.Button className="inline-flex items-center justify-center rounded-lg bg-gray-200 p-1.5 text-gray-800 transition-all hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-primary-500 md:hidden">
                             <span className="sr-only">Open menu</span>
-                            <MenuIcon className="h-5 w-5" aria-hidden="true" />
+                            <Bars3Icon className="h-5 w-5" aria-hidden="true" />
                         </Popover.Button>
                     </div>
                 </div>
@@ -98,7 +98,7 @@ const Header = () => {
                             <>
                                 <Popover.Button className="absolute top-4 right-4 inline-flex items-center justify-center rounded-md bg-gray-200 p-1.5 text-gray-800 transition-all hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-primary-500">
                                     <span className="sr-only">Close menu</span>
-                                    <XIcon
+                                    <XMarkIcon
                                         className="h-5 w-5"
                                         aria-hidden="true"
                                     />

@@ -1,5 +1,5 @@
-import * as SolidIcons from '@heroicons/react/solid'
-import * as OutlineIcons from '@heroicons/react/outline'
+import * as SolidIcons from '@heroicons/react/24/solid'
+import * as OutlineIcons from '@heroicons/react/24/outline'
 import dynamic from 'next/dynamic'
 import { ComponentType } from 'react'
 
@@ -19,11 +19,11 @@ const HeroIcon = ({ name, className = '' }: Props) => {
         const Icon: ComponentType<{ className: string }> = outline
             ? // @ts-ignore
               dynamic(() =>
-                  import('@heroicons/react/outline').then((mod) => mod[name])
+                  import('@heroicons/react/24/outline').then((mod) => mod[name])
               )
             : // @ts-ignore
               dynamic(() =>
-                  import('@heroicons/react/solid').then((mod) => mod[name])
+                  import('@heroicons/react/24/solid').then((mod) => mod[name])
               )
 
         return <Icon className={className} aria-hidden={true} />

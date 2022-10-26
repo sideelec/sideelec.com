@@ -5,7 +5,7 @@ import { Transition } from '@headlessui/react'
 import toast from 'react-hot-toast'
 import clsx from 'clsx'
 import contactContent from '~/content/contact.json'
-import { XIcon } from '@heroicons/react/solid'
+import { XIcon } from '@heroicons/react/24/solid'
 import React from 'react'
 
 const notify = ({
