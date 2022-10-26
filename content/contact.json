@@ -15,7 +15,7 @@
                 }
             },
             {
-                "icon": "MailIcon",
+                "icon": "InboxIcon",
                 "title": "Par email",
                 "description": "Nous répondrons sur les horaires d'ouverture de nos bureaux à <strong>contact@sideelec.com</strong>.",
                 "link": {
@@ -25,7 +25,7 @@
                 }
             },
             {
-                "icon": "ChatAltIcon",
+                "icon": "ChatBubbleBottomCenterTextIcon",
                 "title": "Via le formulaire",
                 "description": "Contactez-nous directement sur notre site à l'aide du formulaire de contact.",
                 "link": {

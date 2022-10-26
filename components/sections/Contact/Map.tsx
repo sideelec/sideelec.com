@@ -1,4 +1,4 @@
-import { ExternalLinkIcon } from '@heroicons/react/24/outline'
+import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import Button from '~/components/Button'
@@ -24,7 +24,7 @@ const Iframe = () => {
                 size="small"
             >
                 <span>Consulter</span>
-                <ExternalLinkIcon className="ml-2 -mr-1 h-4 w-4" />
+                <ArrowTopRightOnSquareIcon className="ml-2 -mr-1 h-4 w-4" />
             </Button>
         </div>
     )

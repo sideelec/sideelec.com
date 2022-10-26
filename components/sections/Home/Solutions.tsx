@@ -1,11 +1,9 @@
 import HeroIcon from '~/components/HeroIcon'
 import homeContent from '~/content/home.json'
 
-const Card = ({
-    name,
-    description,
-    icon,
-}: typeof homeContent.solutions.cards[0]) => {
+type CardProps = typeof homeContent.solutions.cards[0]
+
+function Card({ name, description, icon }: CardProps) {
     return (
         <div className="pt-6">
             <div className="flow-root rounded-lg bg-gray-100 px-6 pb-8">
@@ -31,10 +29,13 @@ const Card = ({
     )
 }
 
-const Solutions = () => {
+export default function Solutions() {
     const { solutions } = homeContent
     return (
-        <div className="relative bg-white py-16 sm:py-24 lg:py-32">
+        <div
+            id="solutions"
+            className="relative bg-white py-16 sm:py-24 lg:py-32"
+        >
             <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
                 <h2 className="text-gradient bg-gradient text-xl font-semibold">
                     {solutions.subtitle}
@@ -56,5 +57,3 @@ const Solutions = () => {
         </div>
     )
 }
-
-export default Solutions
