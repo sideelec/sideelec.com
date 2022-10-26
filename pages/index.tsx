@@ -19,6 +19,7 @@ const Home: NextPage = () => {
             <Meta />
             <div>
                 <Hero />
+
                 <Solutions />
                 <Services />
                 <Partners />

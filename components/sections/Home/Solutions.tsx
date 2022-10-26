@@ -1,62 +1,56 @@
-import { ArrowRightIcon } from '@heroicons/react/24/outline'
-import Link from 'next/link'
-import Button from '~/components/Button'
 import HeroIcon from '~/components/HeroIcon'
-import solutionsContent from '~/content/solutions.json'
+import homeContent from '~/content/home.json'
 
-interface CardProps {
-    icon: string
-    title: string
-    description: string
-    preview: string
-    slug: string
-}
-
-const Card = ({ icon, title, description, preview, slug }: CardProps) => {
+const Card = ({
+    name,
+    description,
+    icon,
+}: typeof homeContent.solutions.cards[0]) => {
     return (
-        <Link
-            href={`/solutions/${slug}`}
-            className="group flex flex-col justify-between rounded-lg border border-gray-200 bg-gradient-to-tr from-gray-200 to-gray-100 p-6 transition-transform hover:scale-105 focus:outline-none focus:ring-4 focus:ring-primary-400"
-        >
-            <div className="space-y-2">
-                <div className="flex items-start justify-between">
-                    <div className="bg-gradient inline-block rounded-lg p-2">
-                        <HeroIcon name={icon} className="h-7 w-7 text-white" />
+        <div className="pt-6">
+            <div className="flow-root rounded-lg bg-gray-100 px-6 pb-8">
+                <div className="-mt-6">
+                    <div>
+                        <span className="bg-gradient inline-flex items-center justify-center rounded-md p-3 shadow-lg">
+                            <HeroIcon
+                                name={icon}
+                                className="h-6 w-6 text-white"
+                                aria-hidden="true"
+                            />
+                        </span>
                     </div>
-                    <ArrowRightIcon className="h-5 w-5 text-gray-700 transition-transform group-hover:-rotate-45 group-hover:scale-150" />
+                    <h3 className="mt-8 text-xl font-semibold tracking-tight text-gray-900">
+                        {name}
+                    </h3>
+                    <p className="mt-5 text-base text-gray-500">
+                        {description}
+                    </p>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-700">{title}</h3>
-                <p className="text-gray-500">{description}</p>
             </div>
-            <p className="mt-3 text-sm font-semibold text-gray-500">
-                {preview}
-            </p>
-        </Link>
+        </div>
     )
 }
 
 const Solutions = () => {
-    const solutions = solutionsContent
+    const { solutions } = homeContent
     return (
-        <div id="solutions" className="">
-            <div className="custom-container py-24">
-                <div>
-                    <div className="flex items-center justify-between space-x-4">
-                        <h2 className="mb-6 text-5xl font-bold uppercase text-gray-800">
-                            {solutions.title}
-                        </h2>
-                        <Button as={Link} href="/solutions" size="small">
-                            {solutions.button}
-                        </Button>
+        <div className="relative bg-white py-16 sm:py-24 lg:py-32">
+            <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
+                <h2 className="text-gradient bg-gradient text-xl font-semibold">
+                    {solutions.subtitle}
+                </h2>
+                <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                    {solutions.title}
+                </p>
+                <p className="mx-auto mt-5 max-w-prose text-xl text-gray-500">
+                    {solutions.description}
+                </p>
+                <div className="mt-12">
+                    <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                        {solutions.cards.map((solution) => (
+                            <Card key={solution.name} {...solution} />
+                        ))}
                     </div>
-                    <p className="max-w-2xl text-base font-medium text-gray-500">
-                        {solutions.description}
-                    </p>
-                </div>
-                <div className="mt-9 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-                    {solutions.solutions.map((card, index) => (
-                        <Card key={index} {...card} />
-                    ))}
                 </div>
             </div>
         </div>
