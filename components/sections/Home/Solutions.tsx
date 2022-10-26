@@ -38,7 +38,7 @@ const Card = ({ icon, title, description, preview, slug }: CardProps) => {
 const Solutions = () => {
     const solutions = solutionsContent
     return (
-        <div className="">
+        <div id="solutions" className="">
             <div className="custom-container py-24">
                 <div>
                     <div className="flex items-center justify-between space-x-4">

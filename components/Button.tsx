@@ -34,12 +34,12 @@ const Button: ButtonComponent = forwardRef(
     ) => {
         const colorClass = {
             primary:
-                'bg-gradient text-white hover:from-primary-500 hover:to-primary-400 focus:ring-primary-200',
-            gray: 'bg-gray-700 text-gray-100 hover:bg-gray-600 focus:ring-gray-500',
-            white: 'bg-white text-gray-700 hover:bg-gray-50 focus:ring-primary-500',
+                'bg-gradient text-white hover:from-primary-500 hover:to-primary-400 focus:ring-primary-500',
+            gray: 'bg-gray-600 text-gray-100 hover:bg-gray-600 focus:ring-gray-600',
+            white: 'bg-white text-gray-700 hover:bg-gray-50 focus:ring-white',
         }[color]
         const sizeClass = {
-            small: 'py-1 px-4',
+            small: 'py-2 px-4',
             medium: 'px-6 py-3',
         }[size]
 
@@ -50,7 +50,7 @@ const Button: ButtonComponent = forwardRef(
                 ref={ref}
                 className={clsx(
                     className,
-                    'inline-flex items-center rounded-lg font-medium uppercase transition-all focus:outline-none focus:ring-2',
+                    'inline-flex items-center rounded-lg font-semibold uppercase transition-all focus:outline-none focus:ring-2 focus:ring-offset-2',
                     colorClass,
                     sizeClass,
                     disabled && '!bg-gray-300 !bg-[image:none] !text-white',

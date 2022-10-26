@@ -24,7 +24,7 @@ const Card = ({ icon, title, description }: CardProps) => {
 const Services = () => {
     const { services } = homeContent
     return (
-        <div className="bg-gradient">
+        <div id="services" className="bg-gradient">
             <div className="custom-container py-24">
                 <div>
                     <div className="flex items-center justify-between space-x-4">

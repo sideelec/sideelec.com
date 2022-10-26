@@ -2,9 +2,9 @@ import { Popover, Transition } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import clsx from 'clsx'
 import Link from 'next/link'
-import { useRouter } from 'next/router'
-import React from 'react'
+import React, { useState } from 'react'
 import Button from '~/components/Button'
+import useWindowEventListener from '~/hooks/useWindowEventListener'
 
 const links: { name: string; href: string }[] = [
     {
@@ -13,30 +13,37 @@ const links: { name: string; href: string }[] = [
     },
     {
         name: 'Solutions',
-        href: '/solutions',
+        href: '/#solutions',
     },
     {
         name: 'Services',
-        href: '/services',
+        href: '/#services',
+    },
+    {
+        name: 'Partenaires',
+        href: '/#partenaires',
     },
     {
         name: "L'entreprise",
-        href: '/l-entreprise',
-    },
-    {
-        name: 'Nouveautés',
-        href: '/nouveautes',
+        href: '/#entreprise',
     },
 ]
 
 const Header = () => {
-    const { pathname } = useRouter()
-
+    const [isTop, setIsTop] = useState(true)
+    useWindowEventListener('scroll', () => setIsTop(window.scrollY < 100), {
+        passive: true,
+    })
     return (
-        <header className="sticky -top-1 z-50 border-b border-gray-200 bg-white">
+        <header
+            className={clsx(
+                'sticky top-0 z-50 border-b bg-white',
+                isTop ? 'border-transparent' : 'border-gray-200'
+            )}
+        >
             <Popover className="relative">
                 <div className="custom-container flex items-center justify-between py-3">
-                    <div className="flex items-center space-x-6">
+                    <div className="flex items-center space-x-10">
                         <Link
                             href="/"
                             className="flex items-center space-x-2 rounded-md focus:outline-none focus:ring focus:ring-primary-500"
@@ -57,13 +64,7 @@ const Header = () => {
                                 <Link
                                     href={href}
                                     key={index}
-                                    className={clsx(
-                                        'rounded-md font-medium text-gray-500 transition-colors hover:text-gray-600 focus:outline-none focus:ring focus:ring-primary-500',
-                                        (href === '/'
-                                            ? pathname === '/'
-                                            : pathname.startsWith(href)) &&
-                                            '!text-gray-700'
-                                    )}
+                                    className="rounded-md font-medium text-gray-500 transition-colors hover:text-gray-600 focus:outline-none focus:ring focus:ring-primary-500"
                                 >
                                     {name}
                                 </Link>
@@ -108,15 +109,7 @@ const Header = () => {
                                             key={index}
                                             href={href}
                                             onClick={() => close()}
-                                            className={clsx(
-                                                'relative inline-flex items-center space-x-1 rounded-md font-medium text-gray-500 transition-colors hover:text-gray-600 focus:outline-none focus:ring focus:ring-primary-500',
-                                                (href === '/'
-                                                    ? pathname === '/'
-                                                    : pathname.startsWith(
-                                                          href
-                                                      )) &&
-                                                    'bg-gradient text-gradient font-bold'
-                                            )}
+                                            className="relative inline-flex items-center space-x-1 rounded-md font-medium text-gray-500 transition-colors hover:text-gray-600 focus:outline-none focus:ring focus:ring-primary-500"
                                         >
                                             {name}
                                         </Link>

@@ -6,7 +6,6 @@ import type { AppProps } from 'next/app'
 import PlausibleProvider from 'next-plausible'
 import { Transition } from '@headlessui/react'
 import { publicEnv as env } from '~/lib/env'
-import Banner from '~/components/Layout/Banner'
 import Header from '~/components/Layout/Header'
 import Footer from '~/components/Layout/Footer'
 import { MetaContextValue, MetaContext } from '~/context/meta'
@@ -27,7 +26,7 @@ const App = ({ Component, pageProps, router }: AppProps) => {
         <MetaContext.Provider value={meta}>
             <PlausibleProvider domain={env.domain}>
                 <Toaster position="bottom-right" reverseOrder={true} />
-                <Banner />
+                {/* <Banner /> */}
                 <Header />
                 <Transition
                     key={router.route}

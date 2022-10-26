@@ -1,34 +1,13 @@
-import type { GetStaticProps, InferGetStaticPropsType, NextPage } from 'next'
+import type { NextPage } from 'next'
 import Hero from '~/components/sections/Home/Hero'
 import Partners from '~/components/sections/Home/Partners'
 import Services from '~/components/sections/Home/Services'
 import Solutions from '~/components/sections/Home/Solutions'
 import homeContent from '~/content/home.json'
-import newsContent from '~/content/news.json'
-import { getPlaiceholder } from 'plaiceholder'
-
 import { useMeta } from '~/hooks/useMeta'
-import { BlurredImage } from '~/types/home'
+import Company from '~/components/sections/Home/Company'
 
-export const getStaticProps: GetStaticProps<{
-    blurredImages: BlurredImage[]
-}> = async () => {
-    const rawImages = newsContent.products.map((product) => product.image)
-    const blurredImages: BlurredImage[] = []
-    for (const image of rawImages) {
-        const { base64, img } = await getPlaiceholder(image)
-        blurredImages.push({ ...img, blurDataURL: base64 })
-    }
-    return {
-        props: {
-            blurredImages,
-        },
-    }
-}
-
-const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
-    blurredImages,
-}) => {
+const Home: NextPage = () => {
     const { hero } = homeContent
     const { Meta } = useMeta({
         title: 'Accueil',
@@ -39,12 +18,11 @@ const Home: NextPage<InferGetStaticPropsType<typeof getStaticProps>> = ({
         <>
             <Meta />
             <div>
-                <Hero blurredImages={blurredImages} />
-                <div id="content">
-                    <Solutions />
-                    <Services />
-                    <Partners />
-                </div>
+                <Hero />
+                <Solutions />
+                <Services />
+                <Partners />
+                <Company />
             </div>
         </>
     )
