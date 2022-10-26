@@ -12,17 +12,15 @@ export default function Hero() {
                     <h1>
                         <span className="mt-1 block text-4xl font-bold tracking-tight sm:text-5xl xl:text-6xl">
                             <span className="block text-gray-900">
-                                Distribution de
+                                {hero.title1}
                             </span>
                             <span className="bg-gradient text-gradient block">
-                                systèmes de sécurité
+                                {hero.title2}
                             </span>
                         </span>
                     </h1>
                     <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
-                        Depuis 20 ans, nous accompagnons les installateurs de
-                        matériel de sécurité informatique. Lorem ipsum dolor sit
-                        amet consectetur adipisicing elit. Esse, sint.
+                        {hero.description}
                     </p>
                     <div className="mt-8 grid gap-4 sm:grid-cols-2 md:flex">
                         <Button
@@ -46,8 +44,8 @@ export default function Hero() {
                     <div className="relative mx-auto w-full overflow-hidden rounded-lg shadow-lg lg:max-w-md">
                         <img
                             className="w-full"
-                            src="https://images.unsplash.com/photo-1556740758-90de374c12ad?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
-                            alt=""
+                            src={hero.image.url}
+                            alt={hero.image.alt}
                         />
                     </div>
                 </div>
