@@ -17,7 +17,7 @@ const Footer = () => {
     const { pathname } = useRouter()
     return (
         <div className="mt-auto">
-            {pathname !== '/contact' && <Contact />}
+            {!['/contact', '/404'].includes(pathname) && <Contact />}
             <footer className="border-t border-gray-200 bg-gray-50">
                 <div className="custom-container flex flex-col-reverse items-center justify-between py-4 md:flex-row">
                     <div className="mt-2 text-center text-sm text-gray-500 md:mt-0">

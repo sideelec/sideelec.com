@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## TODO
 
--   [ ] Error pages
+-   [x] Error pages
 -   [ ] Check semantic tags
 -   [ ] Setup SMTP
 -   [ ] Run ligthouse tests
@@ -10,6 +10,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 -   [ ] SEO (OG etc)
 -   [ ] Content
 -   [ ] Remove robots.txt
+-   [ ] Next image
 
 ## Getting Started
 
