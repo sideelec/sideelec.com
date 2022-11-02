@@ -75,7 +75,7 @@ const Header = () => {
                         <Button as={Link} href="/contact" size="small">
                             Contact
                         </Button>
-                        <Popover.Button className="inline-flex items-center justify-center rounded-lg bg-gray-200 p-1.5 text-gray-800 transition-all hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-primary-500 md:hidden">
+                        <Popover.Button className="inline-flex items-center justify-center rounded-lg bg-gray-200 p-2.5 text-gray-800 transition-all hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-primary-500 md:hidden">
                             <span className="sr-only">Open menu</span>
                             <Bars3Icon className="h-5 w-5" aria-hidden="true" />
                         </Popover.Button>

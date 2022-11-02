@@ -6,10 +6,10 @@ type CardProps = typeof homeContent.solutions.cards[0]
 function Card({ name, description, icon }: CardProps) {
     return (
         <div className="pt-6">
-            <div className="flow-root rounded-lg bg-gray-100 px-6 pb-8">
+            <div className="flow-root rounded-2xl border border-gray-200 bg-gray-50 px-6 pb-8">
                 <div className="-mt-6">
                     <div>
-                        <span className="bg-gradient inline-flex items-center justify-center rounded-md p-3 shadow-lg">
+                        <span className="bg-gradient inline-flex items-center justify-center rounded-xl p-3 shadow-lg">
                             <HeroIcon
                                 name={icon}
                                 className="h-6 w-6 text-white"

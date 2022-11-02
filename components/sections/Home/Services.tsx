@@ -1,57 +1,51 @@
-import Link from 'next/link'
-import Button from '~/components/Button'
 import HeroIcon from '~/components/HeroIcon'
 import homeContent from '~/content/home.json'
 
-interface CardProps {
-    title: string
-    description: string
-    icon: string
-}
+type CardProps = typeof homeContent.services.cards[0]
 
-const Card = ({ icon, title, description }: CardProps) => {
+function Card({ name, description, icon }: CardProps) {
     return (
-        <div className="space-y-2 rounded-lg p-2">
-            <div className="inline-block rounded-lg bg-primary-400 p-2">
-                <HeroIcon name={icon} className="h-7 w-7 text-white" />
+        <div className="rounded-2xl border border-gray-200 bg-white p-8 text-left">
+            <div>
+                <span className="bg-gradient inline-flex items-center justify-center rounded-lg p-2">
+                    <HeroIcon
+                        name={icon}
+                        className="h-6 w-6 text-white"
+                        aria-hidden="true"
+                    />
+                </span>
             </div>
-            <h3 className="text-xl font-semibold text-white">{title}</h3>
-            <p className="text-primary-100">{description}</p>
+            <h3 className="mt-6 text-xl font-semibold text-gray-900">{name}</h3>
+            <p className="mt-2 text-gray-700">{description}</p>
         </div>
     )
 }
 
-const Services = () => {
+export default function Services() {
     const { services } = homeContent
     return (
-        <div id="services" className="bg-gradient">
-            <div className="custom-container py-24">
-                <div>
-                    <div className="flex items-center justify-between space-x-4">
-                        <h2 className="mb-6 text-5xl font-bold uppercase text-white">
-                            {services.title}
-                        </h2>
-                        <Button
-                            as={Link}
-                            href="/services"
-                            size="small"
-                            color="white"
-                        >
-                            {services.button}
-                        </Button>
+        <div
+            id="services"
+            className="relative bg-gray-50 py-16 sm:py-24 lg:py-32"
+        >
+            <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
+                <h2 className="text-gradient bg-gradient text-xl font-semibold">
+                    {services.subtitle}
+                </h2>
+                <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                    {services.title}
+                </p>
+                <p className="mx-auto mt-5 max-w-prose text-xl text-gray-500">
+                    {services.description}
+                </p>
+                <div className="mt-12">
+                    <div className="mx-auto grid max-w-4xl grid-cols-1 gap-8 sm:grid-cols-2">
+                        {services.cards.map((service) => (
+                            <Card key={service.name} {...service} />
+                        ))}
                     </div>
-                    <p className="max-w-2xl text-base font-medium text-primary-100">
-                        {services.description}
-                    </p>
-                </div>
-                <div className="mt-9 grid gap-x-6 gap-y-12 sm:grid-cols-2">
-                    {services.cards.map((card, index) => (
-                        <Card key={index} {...card} />
-                    ))}
                 </div>
             </div>
         </div>
     )
 }
-
-export default Services

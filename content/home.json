@@ -50,29 +50,29 @@
         ]
     },
     "services": {
-        "title": "Nos services",
-        "button": "En savoir plus",
-        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam eget lacus ullamcorper, euismod felis nec, aliquet dolor. Suspendisse euismod est enim, at pharetra leo semper placerat. Proin finibus fringilla velit porttitor accumsan.",
+        "subtitle": "Nos services",
+        "title": "Nous touchons à de nombreux domaines",
+        "description": "Phasellus lorem quam molestie id quisque diam aenean nulla in. Accumsan in quis quis nunc, ullamcorper malesuada. Eleifend condimentum id viverra nulla.",
         "cards": [
             {
-                "title": "Audit et avant-vente",
-                "description": "lorem ipsum",
-                "icon": "CheckBadgeIcon"
+                "name": "Push to Deploy",
+                "description": "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
+                "icon": "CloudArrowUpIcon"
             },
             {
-                "title": "Audit et avant-vente",
-                "description": "lorem ipsum",
-                "icon": "CheckBadgeIcon"
+                "name": "SSL Certificates",
+                "description": "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
+                "icon": "LockClosedIcon"
             },
             {
-                "title": "Audit et avant-vente",
-                "description": "lorem ipsum",
-                "icon": "CheckBadgeIcon"
+                "name": "Simple Queues",
+                "description": "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
+                "icon": "ArrowPathIcon"
             },
             {
-                "title": "Audit et avant-vente",
-                "description": "lorem ipsum",
-                "icon": "CheckBadgeIcon"
+                "name": "Advanced Security",
+                "description": "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
+                "icon": "ShieldCheckIcon"
             }
         ]
     },
