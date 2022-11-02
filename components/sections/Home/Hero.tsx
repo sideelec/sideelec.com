@@ -33,6 +33,7 @@ export default function Hero() {
                         <Button
                             as={Link}
                             href="/#solutions"
+                            scroll={false}
                             color="gray"
                             className="w-full justify-center lg:w-auto lg:justify-start"
                         >
