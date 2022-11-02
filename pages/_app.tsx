@@ -1,5 +1,5 @@
 import 'focus-visible'
-import '~/styles/main.scss'
+import '~/styles/main.css'
 import '~/lib/fonts'
 import type { AppProps } from 'next/app'
 import PlausibleProvider from 'next-plausible'
