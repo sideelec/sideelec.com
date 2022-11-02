@@ -6,10 +6,11 @@ import React, { useState } from 'react'
 import Button from '~/components/Button'
 import useWindowEventListener from '~/hooks/useWindowEventListener'
 
-const links: { name: string; href: string }[] = [
+const links: { name: string; href: string; scroll?: boolean }[] = [
     {
         name: 'Accueil',
         href: '/',
+        scroll: true,
     },
     {
         name: 'Solutions',
@@ -27,7 +28,7 @@ const links: { name: string; href: string }[] = [
         name: "L'entreprise",
         href: '/#entreprise',
     },
-]
+].map((link) => ({ ...link, scroll: link.scroll || false }))
 
 const Header = () => {
     const [isTop, setIsTop] = useState(true)
@@ -60,9 +61,9 @@ const Header = () => {
                             </span>
                         </Link>
                         <div className="hidden items-center space-x-4 md:flex">
-                            {links.map(({ href, name }, index) => (
+                            {links.map(({ name, ...rest }, index) => (
                                 <Link
-                                    href={href}
+                                    {...rest}
                                     key={index}
                                     className="rounded-md font-medium text-gray-500 transition-colors hover:text-gray-600 focus:outline-none focus:ring focus:ring-primary-500"
                                 >
@@ -104,10 +105,10 @@ const Header = () => {
                                     />
                                 </Popover.Button>
                                 <div className="flex flex-col items-center justify-center space-y-6 text-xl">
-                                    {links.map(({ href, name }, index) => (
+                                    {links.map(({ name, ...rest }, index) => (
                                         <Link
+                                            {...rest}
                                             key={index}
-                                            href={href}
                                             onClick={() => close()}
                                             className="relative inline-flex items-center space-x-1 rounded-md font-medium text-gray-500 transition-colors hover:text-gray-600 focus:outline-none focus:ring focus:ring-primary-500"
                                         >
