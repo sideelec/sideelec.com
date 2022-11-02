@@ -9,8 +9,8 @@
         }
     },
     "banner": {
-        "prefix": "Nouveau !",
-        "content": "Nous avons un nouveau site web.",
-        "link": "/"
+        "prefix": "🚧 Avertissement",
+        "content": "Site web en cours de construction.",
+        "link": null
     }
 }

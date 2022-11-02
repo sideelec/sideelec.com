@@ -9,6 +9,7 @@ import Footer from '~/components/Layout/Footer'
 import { MetaContextValue, MetaContext } from '~/context/meta'
 import React from 'react'
 import { Toaster } from 'react-hot-toast'
+import Banner from '~/components/Layout/Banner'
 
 const meta: MetaContextValue = {
     description: 'description',
@@ -22,7 +23,7 @@ const App = ({ Component, pageProps }: AppProps) => {
         <MetaContext.Provider value={meta}>
             <PlausibleProvider domain={env.domain}>
                 <Toaster position="bottom-right" reverseOrder={true} />
-                {/* <Banner /> */}
+                <Banner />
                 <Header />
                 <main>
                     <Component {...pageProps} />
