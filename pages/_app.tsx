@@ -1,17 +1,19 @@
 import 'focus-visible'
 import '~/styles/main.scss'
-import '~/lib/fonts'
-import '~/lib/swiper'
 import type { AppProps } from 'next/app'
 import PlausibleProvider from 'next-plausible'
-import { Transition } from '@headlessui/react'
 import { publicEnv as env } from '~/lib/env'
 import Header from '~/components/Layout/Header'
 import Footer from '~/components/Layout/Footer'
 import { MetaContextValue, MetaContext } from '~/context/meta'
-import { useScrollRestoration } from '~/hooks/useScrollRestoration'
 import React from 'react'
 import { Toaster } from 'react-hot-toast'
+import { Barlow } from '@next/font/google'
+
+const barlow = Barlow({
+    subsets: ['latin'],
+    weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+})
 
 const meta: MetaContextValue = {
     description: 'description',
@@ -20,33 +22,21 @@ const meta: MetaContextValue = {
     titleTemplate: (title) => (title ? `${title} - SIDEELEC` : 'SIDEELEC'),
 }
 
-const App = ({ Component, pageProps, router }: AppProps) => {
-    useScrollRestoration(router)
+const App = ({ Component, pageProps }: AppProps) => {
     return (
-        <MetaContext.Provider value={meta}>
-            <PlausibleProvider domain={env.domain}>
-                <Toaster position="bottom-right" reverseOrder={true} />
-                {/* <Banner /> */}
-                <Header />
-                <Transition
-                    key={router.route}
-                    as="div"
-                    appear={true}
-                    show={true}
-                    enter="transition-opacity duration-300 ease-out"
-                    enterFrom="opacity-0"
-                    enterTo="opacity-100"
-                    leave="transition-opacity duration-300 ease-in"
-                    leaveFrom="opacity-100"
-                    leaveTo="opacity-0"
-                >
+        <div className={barlow.className}>
+            <MetaContext.Provider value={meta}>
+                <PlausibleProvider domain={env.domain}>
+                    <Toaster position="bottom-right" reverseOrder={true} />
+                    {/* <Banner /> */}
+                    <Header />
                     <main>
                         <Component {...pageProps} />
                     </main>
-                </Transition>
-                <Footer />
-            </PlausibleProvider>
-        </MetaContext.Provider>
+                    <Footer />
+                </PlausibleProvider>
+            </MetaContext.Provider>
+        </div>
     )
 }
 
