@@ -17,13 +17,13 @@ const Iframe = () => {
             ></iframe>
             <Button
                 as={Link}
-                href="https://www.openstreetmap.org/?mlat=43.6191&amp;mlon=1.4411#map=15/43.6191/1.4411"
+                href="https://www.google.com/maps/place/54+Rue+de+Negreneys,+31200+Toulouse,+France"
                 target="_blank"
                 className="absolute top-2 right-2 capitalize"
                 color="gray"
                 size="small"
             >
-                <span>Consulter</span>
+                <span>Voir sur Google Maps</span>
                 <ArrowTopRightOnSquareIcon className="ml-2 -mr-1 h-4 w-4" />
             </Button>
         </div>
@@ -34,16 +34,16 @@ const Content = () => {
     const { map } = contactContent
     return (
         <div>
-            <h2 className="mb-6 text-5xl font-bold uppercase text-gray-800">
+            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
                 {map.title}
             </h2>
             <p
-                className="max-w-lg text-base font-medium text-gray-500"
+                className="mx-auto mt-5 max-w-prose text-xl text-gray-500"
                 dangerouslySetInnerHTML={{
                     __html: map.description,
                 }}
             />
-            <div className="mt-4 overflow-hidden rounded-lg border border-gray-200">
+            <div className="mt-12 overflow-hidden rounded-lg border border-gray-200">
                 {map.hours.map(({ day, hours }, index) => (
                     <div
                         key={index}
@@ -67,7 +67,6 @@ const Map = () => {
     useEffect(() => setIframe(<Iframe />), [])
     return (
         <>
-            <div className="h-12 bg-gradient-to-b from-white to-gray-50"></div>
             <div className="bg-gray-50">
                 <div className="custom-container py-12">
                     <div className="grid gap-8 md:grid-cols-2">
@@ -76,7 +75,6 @@ const Map = () => {
                     </div>
                 </div>
             </div>
-            <div className="h-12 bg-gradient-to-b from-gray-50 to-white"></div>
         </>
     )
 }

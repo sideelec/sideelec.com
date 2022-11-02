@@ -53,10 +53,10 @@ const Hero = () => {
             >
                 <div className="absolute inset-0 z-0 bg-black/80"></div>
                 <div className="custom-container relative pt-24 pb-48">
-                    <h1 className="text-6xl font-bold uppercase text-white">
+                    <h1 className="mt-1 block text-4xl font-bold tracking-tight text-white sm:text-5xl xl:text-6xl">
                         {hero.title}
                     </h1>
-                    <p className="mt-4 max-w-2xl text-lg text-gray-400">
+                    <p className="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
                         {hero.description}
                     </p>
                 </div>

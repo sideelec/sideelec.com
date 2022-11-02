@@ -72,6 +72,7 @@
     },
     "form": {
         "title": "Formulaire",
-        "description": "lorem ipsum"
+        "description": "lorem ipsum",
+        "notice": "Nous ne récoltons aucune de ces informations. Elles ne sont utilisées que pour l'envoi d'un email."
     }
 }
