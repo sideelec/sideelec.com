@@ -6,7 +6,7 @@ export default function Hero() {
     const { hero } = homeContent
 
     return (
-        <div className="custom-container px-4 py-10 lg:py-24">
+        <div className="custom-container py-10 lg:py-24">
             <div className="lg:grid lg:grid-cols-12 lg:gap-8">
                 <div className="sm:text-center md:mx-auto md:max-w-2xl lg:col-span-6 lg:text-left">
                     <h1>

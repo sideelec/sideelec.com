@@ -38,7 +38,7 @@ export default function LegalDocument({
     return (
         <>
             <Meta />
-            <div className="custom-container mx-auto px-4">
+            <div className="custom-container">
                 <h1 className="block pb-24 pt-12 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl xl:text-6xl">
                     {frontmatter.title}
                 </h1>

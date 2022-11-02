@@ -4,7 +4,7 @@ import Form from '~/components/sections/Contact/Form'
 import contactContent from '~/content/contact.json'
 import { useMeta } from '~/hooks/useMeta'
 
-const Contact = () => {
+export default function Contact() {
     const { title, description } = contactContent.hero
     const { Meta } = useMeta({
         title,
@@ -14,13 +14,9 @@ const Contact = () => {
     return (
         <>
             <Meta />
-            <div>
-                <Hero />
-                <Map />
-                <Form />
-            </div>
+            <Hero />
+            <Map />
+            <Form />
         </>
     )
 }
-
-export default Contact

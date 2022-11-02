@@ -36,7 +36,7 @@ export default function Solutions() {
             id="solutions"
             className="relative bg-white py-16 sm:py-24 lg:py-32"
         >
-            <div className="custom-container px-4 text-center">
+            <div className="custom-container text-center">
                 <h2 className="text-gradient bg-gradient text-xl font-semibold">
                     {solutions.subtitle}
                 </h2>

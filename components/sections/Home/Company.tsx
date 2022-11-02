@@ -4,7 +4,7 @@ export default function Company() {
     const { company } = homeContent
     return (
         <div id="entreprise" className="relative bg-white py-16 sm:py-24">
-            <div className="custom-container !overflow-hidden px-4 lg:grid lg:grid-cols-2 lg:items-start lg:gap-24 lg:!overflow-visible">
+            <div className="custom-container !overflow-hidden lg:grid lg:grid-cols-2 lg:items-start lg:gap-24 lg:!overflow-visible">
                 <div className="relative sm:py-16 lg:py-0">
                     <div
                         aria-hidden="true"

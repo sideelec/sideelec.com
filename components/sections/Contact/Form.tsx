@@ -163,7 +163,7 @@ export default function Form() {
     const { form } = contactContent
     return (
         <div className="bg-gray-50 py-24">
-            <div className="custom-container px-4">
+            <div className="custom-container">
                 <div className="md:grid md:grid-cols-3 md:gap-6">
                     <div className="md:col-span-1">
                         <div className="px-4 sm:px-0">
