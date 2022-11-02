@@ -86,5 +86,23 @@
             { "image": "/images/partners/eaton.png", "name": "Eaton" },
             { "image": "/images/partners/kaufel.jpg", "name": "Kaufel" }
         ]
+    },
+    "company": {
+        "title": "A propos de SIDEELEC",
+        "description": "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
+        "paragraphs": [
+            "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
+            "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis."
+        ],
+        "stats": [
+            { "label": "Fondé", "value": "1989" },
+            { "label": "Employés", "value": "9" },
+            { "label": "Clients", "value": "521" },
+            { "label": "Chiffre d'affaires 2021", "value": "1M €" }
+        ],
+        "testimonial": {
+            "quote": "Tincidunt integer commodo, cursus etiam aliquam neque, et. Consectetur pretium in volutpat, diam. Montes, magna cursus nulla feugiat dignissim id lobortis amet.",
+            "source": "Olivier LEFEBVRE, gérant de SIDEELEC"
+        }
     }
 }
