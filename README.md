@@ -4,13 +4,14 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 -   [x] Error pages
 -   [x] Check semantic tags
--   [ ] Setup SMTP
--   [ ] Run ligthouse tests
 -   [x] Check for unused code or packages
--   [ ] SEO (OG etc)
+-   [x] Next image
+-   [ ] Run ligthouse tests
 -   [ ] Content
+-   [ ] SEO (OG etc)
+-   [ ] Setup SMTP
+-   [ ] Remove banner
 -   [ ] Remove robots.txt
--   [ ] Next image
 
 ## Getting Started
 

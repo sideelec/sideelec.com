@@ -3,6 +3,7 @@ import Link from 'next/link'
 import ReactMarkdown from 'react-markdown'
 import HeroIcon from '~/components/HeroIcon'
 import contactContent from '~/content/contact.json'
+import Image from 'next/image'
 
 interface CardProps {
     icon: string
@@ -47,10 +48,13 @@ const Hero = () => {
     const { hero } = contactContent
     return (
         <>
-            <div
-                className="relative bg-cover bg-center"
-                style={{ backgroundImage: `url('${hero.image}')` }}
-            >
+            <div className="relative">
+                <Image
+                    className="object-cover object-center"
+                    src={hero.image.url}
+                    alt={hero.image.alt}
+                    fill
+                />
                 <div className="absolute inset-0 z-0 bg-black/80"></div>
                 <div className="custom-container relative pt-24 pb-48">
                     <h1 className="mt-1 block text-4xl font-bold tracking-tight text-white sm:text-5xl xl:text-6xl">

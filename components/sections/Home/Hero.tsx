@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Button from '~/components/Button'
 import homeContent from '~/content/home.json'
+import Image from 'next/image'
 
 export default function Hero() {
     const { hero } = homeContent
@@ -40,11 +41,12 @@ export default function Hero() {
                     </div>
                 </div>
                 <div className="relative mt-12 sm:mx-auto sm:max-w-lg lg:col-span-6 lg:mx-0 lg:mt-0 lg:flex lg:max-w-none lg:items-center">
-                    <div className="relative mx-auto w-full overflow-hidden rounded-lg shadow-lg lg:max-w-md">
-                        <img
-                            className="w-full"
+                    <div className="relative mx-auto h-72 w-full overflow-hidden rounded-lg shadow-lg lg:max-w-md">
+                        <Image
+                            className="object-cover object-center"
                             src={hero.image.url}
                             alt={hero.image.alt}
+                            fill
                         />
                     </div>
                 </div>

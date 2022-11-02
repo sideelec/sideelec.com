@@ -1,4 +1,5 @@
 import homeContent from '~/content/home.json'
+import Image from 'next/image'
 
 export default function Company() {
     const { company } = homeContent
@@ -47,10 +48,11 @@ export default function Company() {
                     <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-none lg:px-0 lg:py-20">
                         {/* Testimonial card*/}
                         <figure className="relative overflow-hidden rounded-2xl pt-64 pb-10 shadow-xl">
-                            <img
+                            <Image
                                 className="absolute inset-0 h-full w-full object-cover"
                                 src={company.testimonial.image.url}
                                 alt={company.testimonial.image.alt}
+                                fill
                             />
                             <div className="absolute inset-0 bg-primary-500 mix-blend-multiply" />
                             <div className="bg-gradient absolute inset-0 opacity-50" />

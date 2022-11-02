@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import Button from '~/components/Button'
 import globalContent from '~/content/global.json'
+import Image from 'next/image'
 
 export default function Contact() {
     const { contact } = globalContent
@@ -19,10 +20,11 @@ export default function Contact() {
                         />
                         <div className="mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-none lg:p-0">
                             <div className="aspect-w-10 aspect-h-6 sm:aspect-w-2 sm:aspect-h-1 lg:aspect-w-1">
-                                <img
+                                <Image
                                     className="rounded-3xl object-cover object-center shadow-2xl"
                                     src={contact.image.url}
                                     alt={contact.image.alt}
+                                    fill
                                 />
                             </div>
                         </div>

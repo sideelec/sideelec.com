@@ -1,14 +1,16 @@
 import homeContent from '~/content/home.json'
+import Image from 'next/image'
 
 type CardProps = typeof homeContent.partners.cards[0]
 
 function Card({ name, image }: CardProps) {
     return (
         <div className="col-span-1 flex justify-center bg-gray-50 py-8 px-8">
-            <img
-                className="max-h-12 object-contain"
+            <Image
+                className="!relative max-h-12 object-scale-down object-center"
                 src={image}
                 alt={`Logo ${name}`}
+                fill
             />
         </div>
     )

@@ -5,6 +5,8 @@ import Link from 'next/link'
 import React, { useState } from 'react'
 import Button from '~/components/Button'
 import useWindowEventListener from '~/hooks/useWindowEventListener'
+import Logo from '~/public/logo.png'
+import Image from 'next/image'
 
 const links: { name: string; href: string; scroll?: boolean }[] = [
     {
@@ -49,12 +51,13 @@ const Header = () => {
                             href="/"
                             className="flex items-center space-x-2 rounded-md focus:outline-none focus:ring focus:ring-primary-500"
                         >
-                            {/* eslint-disable-next-line @next/next/no-img-element */}
-                            <img
-                                src="/logo.png"
+                            <Image
+                                src={Logo}
                                 alt="SIDEELEC logo"
                                 height={40}
                                 width={40}
+                                unoptimized
+                                loading="eager"
                             />
                             <span className="text-2xl font-bold text-primary-500">
                                 SIDEELEC
