@@ -46,7 +46,7 @@ export default function Company() {
                     </div>
                     <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-none lg:px-0 lg:py-20">
                         {/* Testimonial card*/}
-                        <div className="relative overflow-hidden rounded-2xl pt-64 pb-10 shadow-xl">
+                        <figure className="relative overflow-hidden rounded-2xl pt-64 pb-10 shadow-xl">
                             <img
                                 className="absolute inset-0 h-full w-full object-cover"
                                 src={company.testimonial.image.url}
@@ -70,14 +70,12 @@ export default function Company() {
                                         </p>
                                     </div>
 
-                                    <footer className="mt-4">
-                                        <p className="text-base font-semibold text-primary-100">
-                                            {company.testimonial.source}
-                                        </p>
-                                    </footer>
+                                    <figcaption className="mt-4 text-base font-semibold text-primary-100">
+                                        {company.testimonial.source}
+                                    </figcaption>
                                 </blockquote>
                             </div>
-                        </div>
+                        </figure>
                     </div>
                 </div>
 

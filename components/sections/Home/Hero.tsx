@@ -9,14 +9,12 @@ export default function Hero() {
         <div className="custom-container py-10 lg:py-24">
             <div className="lg:grid lg:grid-cols-12 lg:gap-8">
                 <div className="sm:text-center md:mx-auto md:max-w-2xl lg:col-span-6 lg:text-left">
-                    <h1>
-                        <span className="mt-1 block text-4xl font-bold tracking-tight sm:text-5xl xl:text-6xl">
-                            <span className="block text-gray-900">
-                                {hero.title1}
-                            </span>
-                            <span className="bg-gradient text-gradient block">
-                                {hero.title2}
-                            </span>
+                    <h1 className="mt-1 block text-4xl font-bold tracking-tight sm:text-5xl xl:text-6xl">
+                        <span className="block text-gray-900">
+                            {hero.title1}
+                        </span>
+                        <span className="bg-gradient text-gradient block">
+                            {hero.title2}
                         </span>
                     </h1>
                     <p className="mt-3 text-base text-gray-700 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">

@@ -43,7 +43,7 @@ const Header = () => {
             )}
         >
             <Popover className="relative">
-                <div className="custom-container flex items-center justify-between py-3">
+                <nav className="custom-container flex items-center justify-between py-3">
                     <div className="flex items-center space-x-10">
                         <Link
                             href="/"
@@ -60,17 +60,18 @@ const Header = () => {
                                 SIDEELEC
                             </span>
                         </Link>
-                        <div className="hidden items-center space-x-4 md:flex">
+                        <ul className="hidden items-center space-x-4 md:flex">
                             {links.map(({ name, ...rest }, index) => (
-                                <Link
-                                    {...rest}
-                                    key={index}
-                                    className="rounded-md font-medium text-gray-500 transition-colors hover:text-gray-600 focus:outline-none focus:ring focus:ring-primary-500"
-                                >
-                                    {name}
-                                </Link>
+                                <li key={index}>
+                                    <Link
+                                        {...rest}
+                                        className="rounded-md font-medium text-gray-500 transition-colors hover:text-gray-600 focus:outline-none focus:ring focus:ring-primary-500"
+                                    >
+                                        {name}
+                                    </Link>
+                                </li>
                             ))}
-                        </div>
+                        </ul>
                     </div>
                     <div className="flex items-center space-x-2">
                         <Button as={Link} href="/contact" size="small">
@@ -81,7 +82,7 @@ const Header = () => {
                             <Bars3Icon className="h-5 w-5" aria-hidden="true" />
                         </Popover.Button>
                     </div>
-                </div>
+                </nav>
                 <Transition
                     enter="duration-200 ease-out"
                     enterFrom="scale-95 opacity-0"
@@ -104,18 +105,23 @@ const Header = () => {
                                         aria-hidden="true"
                                     />
                                 </Popover.Button>
-                                <div className="flex flex-col items-center justify-center space-y-6 text-xl">
-                                    {links.map(({ name, ...rest }, index) => (
-                                        <Link
-                                            {...rest}
-                                            key={index}
-                                            onClick={() => close()}
-                                            className="relative inline-flex items-center space-x-1 rounded-md font-medium text-gray-500 transition-colors hover:text-gray-600 focus:outline-none focus:ring focus:ring-primary-500"
-                                        >
-                                            {name}
-                                        </Link>
-                                    ))}
-                                </div>
+                                <nav>
+                                    <ul className="flex flex-col items-center justify-center space-y-6 text-xl">
+                                        {links.map(
+                                            ({ name, ...rest }, index) => (
+                                                <li key={index}>
+                                                    <Link
+                                                        {...rest}
+                                                        onClick={() => close()}
+                                                        className="relative inline-flex items-center space-x-1 rounded-md font-medium text-gray-500 transition-colors hover:text-gray-600 focus:outline-none focus:ring focus:ring-primary-500"
+                                                    >
+                                                        {name}
+                                                    </Link>
+                                                </li>
+                                            )
+                                        )}
+                                    </ul>
+                                </nav>
                             </>
                         )}
                     </Popover.Panel>

@@ -167,9 +167,9 @@ export default function Form() {
                 <div className="md:grid md:grid-cols-3 md:gap-6">
                     <div className="md:col-span-1">
                         <div className="px-4 sm:px-0">
-                            <h3 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                            <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
                                 {form.title}
-                            </h3>
+                            </h2>
                             <p className="mx-auto mt-5 max-w-prose text-xl text-gray-700">
                                 {form.description}
                             </p>
