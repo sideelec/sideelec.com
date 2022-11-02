@@ -1,15 +1,13 @@
 import type { GetStaticProps, InferGetStaticPropsType } from 'next'
 import ReactMarkdown from 'react-markdown'
 import { useMeta } from '~/hooks/useMeta'
-import { getAllSlugs, readMarkdownFile } from '~/lib/utils'
+import { getAllSlugs, readMarkdownFile } from '~/utils/md'
 
 export async function getStaticPaths() {
     const slugs = getAllSlugs()
     const paths = slugs.map((s) => ({
         params: { slug: s.replaceAll('.md', '') },
     }))
-
-    console.log(paths)
 
     return {
         paths,

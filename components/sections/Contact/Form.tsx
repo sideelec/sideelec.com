@@ -4,7 +4,7 @@ import { contactSchema } from '~/lib/validation'
 import { Transition } from '@headlessui/react'
 import contactContent from '~/content/contact.json'
 import React from 'react'
-import { notify } from '~/lib/utils'
+import notify from '~/utils/notify'
 
 const Error = ({ name }: { name: string }) => {
     return (
