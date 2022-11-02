@@ -1,4 +1,5 @@
 import bundleAnalyzer from '@next/bundle-analyzer'
+
 const withBundleAnalyzer = bundleAnalyzer({
     enabled: process.env.ANALYZE !== undefined,
 })
@@ -17,6 +18,10 @@ const nextConfig = {
     },
 }
 
-const plugins = [withBundleAnalyzer]
+const plugins = [[withBundleAnalyzer, {}]]
 
-export default plugins.reduce((config, plugin) => plugin(config), nextConfig)
+export default plugins.reduce((config, plugin) => {
+    const fn = plugin[0]
+    const cfg = plugin[1] || {}
+    return fn({ ...config, ...cfg })
+}, nextConfig)
