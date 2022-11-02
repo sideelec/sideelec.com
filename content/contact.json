@@ -7,7 +7,7 @@
             {
                 "icon": "PhoneIcon",
                 "title": "Par téléphone",
-                "description": "Du lundi au vendredi, de 8h00 à 12h00 et de 13h30 à 18h00 au <strong>05 61 13 16 16</strong>.",
+                "description": "Du lundi au vendredi, de 8h00 à 12h00 et de 13h30 à 18h00 au **05 61 13 16 16**.",
                 "link": {
                     "url": "tel:0561131616",
                     "text": "Nous appeler",
@@ -17,7 +17,7 @@
             {
                 "icon": "InboxIcon",
                 "title": "Par email",
-                "description": "Nous répondrons sur les horaires d'ouverture de nos bureaux à <strong>contact@sideelec.com</strong>.",
+                "description": "Nous répondrons sur les horaires d'ouverture de nos bureaux à **contact@sideelec.com**.",
                 "link": {
                     "url": "mailto:contact@sideelec.com",
                     "text": "Nous écrire",
@@ -38,7 +38,7 @@
     },
     "map": {
         "title": "Nous rencontrer",
-        "description": "Rendez-nous visite sur nos horaires d'ouverture au <br /><strong>54, rue Negreneys, 31200 TOULOUSE</strong>:",
+        "description": "Rendez-nous visite sur nos horaires d'ouverture au\n\n**54, rue Negreneys, 31200 TOULOUSE**:",
         "hours": [
             {
                 "day": "Lundi",

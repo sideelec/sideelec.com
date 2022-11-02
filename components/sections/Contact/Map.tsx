@@ -1,6 +1,7 @@
 import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
+import ReactMarkdown from 'react-markdown'
 import Button from '~/components/Button'
 import contactContent from '~/content/contact.json'
 
@@ -37,12 +38,9 @@ const Content = () => {
             <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
                 {map.title}
             </h2>
-            <p
-                className="mx-auto mt-5 max-w-prose text-xl text-gray-500"
-                dangerouslySetInnerHTML={{
-                    __html: map.description,
-                }}
-            />
+            <ReactMarkdown className="mx-auto mt-5 max-w-prose text-xl text-gray-500">
+                {map.description}
+            </ReactMarkdown>
             <div className="mt-12 overflow-hidden rounded-lg border border-gray-200">
                 {map.hours.map(({ day, hours }, index) => (
                     <div

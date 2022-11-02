@@ -1,5 +1,6 @@
 import { ArrowRightIcon } from '@heroicons/react/24/outline'
 import Link from 'next/link'
+import ReactMarkdown from 'react-markdown'
 import HeroIcon from '~/components/HeroIcon'
 import contactContent from '~/content/contact.json'
 
@@ -24,10 +25,9 @@ const Card = ({ icon, title, description, link }: CardProps) => {
                 <h2 className="mt-2 text-xl font-semibold text-gray-700">
                     {title}
                 </h2>
-                <p
-                    className="mt-4 text-gray-500"
-                    dangerouslySetInnerHTML={{ __html: description }}
-                />
+                <ReactMarkdown className="mt-4 text-gray-500">
+                    {description}
+                </ReactMarkdown>
             </div>
             <Link
                 href={link.url}
