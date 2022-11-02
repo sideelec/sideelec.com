@@ -46,7 +46,6 @@ export default function Company() {
                         </svg>
                     </div>
                     <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:max-w-none lg:px-0 lg:py-20">
-                        {/* Testimonial card*/}
                         <figure className="relative overflow-hidden rounded-2xl pt-64 pb-10 shadow-xl">
                             <Image
                                 className="absolute inset-0 h-full w-full object-cover"
@@ -82,7 +81,6 @@ export default function Company() {
                 </div>
 
                 <div className="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0">
-                    {/* Content area */}
                     <div className="pt-12 sm:pt-16 lg:pt-20">
                         <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
                             {company.title}
@@ -97,7 +95,6 @@ export default function Company() {
                         </div>
                     </div>
 
-                    {/* Stats section */}
                     <div className="mt-10">
                         <dl className="grid grid-cols-2 gap-x-4 gap-y-8">
                             {company.stats.map((stat) => (
