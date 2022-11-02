@@ -20,7 +20,7 @@ function Card({ name, description, icon }: CardProps) {
                     <h3 className="mt-8 text-xl font-semibold tracking-tight text-gray-900">
                         {name}
                     </h3>
-                    <p className="mt-5 text-base text-gray-500">
+                    <p className="mt-5 text-base text-gray-700">
                         {description}
                     </p>
                 </div>
@@ -36,7 +36,7 @@ export default function Solutions() {
             id="solutions"
             className="relative bg-white py-16 sm:py-24 lg:py-32"
         >
-            <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
+            <div className="custom-container px-4 text-center">
                 <h2 className="text-gradient bg-gradient text-xl font-semibold">
                     {solutions.subtitle}
                 </h2>

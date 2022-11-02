@@ -28,7 +28,7 @@ export default function Services() {
             id="services"
             className="relative bg-gray-50 py-16 sm:py-24 lg:py-32"
         >
-            <div className="mx-auto max-w-md px-4 text-center sm:max-w-3xl sm:px-6 lg:max-w-7xl lg:px-8">
+            <div className="custom-container px-4 text-center">
                 <h2 className="text-gradient bg-gradient text-xl font-semibold">
                     {services.subtitle}
                 </h2>

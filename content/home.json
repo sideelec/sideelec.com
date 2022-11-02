@@ -77,8 +77,8 @@
         ]
     },
     "partners": {
-        "title": "Nos partenaires",
-        "description": "lorem ipsum",
+        "subtitle": "Nos partenaires",
+        "title": "Ils nous font confiance",
         "cards": [
             { "image": "/images/partners/nugelec.png", "name": "Nugelec" },
             { "image": "/images/partners/slat.png", "name": "Slat" },

@@ -6,7 +6,7 @@ export default function Hero() {
     const { hero } = homeContent
 
     return (
-        <div className="custom-container mx-auto px-4 py-10 lg:py-24">
+        <div className="custom-container px-4 py-10 lg:py-24">
             <div className="lg:grid lg:grid-cols-12 lg:gap-8">
                 <div className="sm:text-center md:mx-auto md:max-w-2xl lg:col-span-6 lg:text-left">
                     <h1>
@@ -19,7 +19,7 @@ export default function Hero() {
                             </span>
                         </span>
                     </h1>
-                    <p className="mt-3 text-base text-gray-500 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
+                    <p className="mt-3 text-base text-gray-700 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
                         {hero.description}
                     </p>
                     <div className="mt-8 grid gap-4 sm:grid-cols-2 md:flex">

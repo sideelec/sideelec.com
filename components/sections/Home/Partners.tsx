@@ -1,39 +1,38 @@
 import homeContent from '~/content/home.json'
 
-interface CardProps {
-    name: string
-    image: string
-}
+type CardProps = typeof homeContent.partners.cards[0]
 
-const Card = ({ name, image }: CardProps) => {
+function Card({ name, image }: CardProps) {
     return (
-        <div className="flex h-20 justify-center rounded-md border border-gray-100 bg-white p-2">
-            <img src={image} alt={`Logo ${name}`} className="object-contain" />
+        <div className="col-span-1 flex justify-center bg-gray-50 py-8 px-8">
+            <img
+                className="max-h-12 object-contain"
+                src={image}
+                alt={`Logo ${name}`}
+            />
         </div>
     )
 }
 
-const Partners = () => {
+export default function Partners() {
     const { partners } = homeContent
     return (
-        <div id="partenaires" className="bg-gray-50">
-            <div className="custom-container py-24">
-                <div>
-                    <h2 className="mb-6 text-5xl font-bold uppercase text-gray-800">
-                        {partners.title}
-                    </h2>
-                    <p className="max-w-2xl text-base font-medium text-gray-500">
-                        {partners.description}
-                    </p>
-                </div>
-                <div className="mt-9 grid gap-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-                    {partners.cards.map((card, index) => (
-                        <Card key={index} {...card} />
-                    ))}
+        <div id="partenaires" className="py-16 sm:py-24 lg:py-32">
+            <div className="custom-container px-4 text-center">
+                <h2 className="text-gradient bg-gradient text-xl font-semibold">
+                    {partners.subtitle}
+                </h2>
+                <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+                    {partners.title}
+                </p>
+                <div className="mt-12">
+                    <div className="grid grid-cols-2 gap-1 md:grid-cols-3">
+                        {partners.cards.map((card, index) => (
+                            <Card key={index} {...card} />
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>
     )
 }
-
-export default Partners
