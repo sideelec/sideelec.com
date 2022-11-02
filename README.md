@@ -6,7 +6,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 -   [x] Check semantic tags
 -   [x] Check for unused code or packages
 -   [x] Next image
--   [ ] Run ligthouse tests
+-   [x] Run ligthouse tests
 -   [ ] Content
 -   [ ] SEO (OG etc)
 -   [ ] Setup SMTP

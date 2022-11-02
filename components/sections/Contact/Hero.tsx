@@ -54,6 +54,7 @@ const Hero = () => {
                     src={hero.image.url}
                     alt={hero.image.alt}
                     fill
+                    priority
                 />
                 <div className="absolute inset-0 z-0 bg-black/80"></div>
                 <div className="custom-container relative pt-24 pb-48">

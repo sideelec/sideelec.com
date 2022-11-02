@@ -9,6 +9,7 @@ const Iframe = () => {
     return (
         <div className="relative min-h-[24rem] overflow-hidden rounded-lg border border-gray-200">
             <iframe
+                title="Carte interactive"
                 width="100%"
                 height="100%"
                 frameBorder="0"
