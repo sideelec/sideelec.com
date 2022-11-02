@@ -1,4 +1,3 @@
-import withPlugins from 'next-compose-plugins'
 import bundleAnalyzer from '@next/bundle-analyzer'
 const withBundleAnalyzer = bundleAnalyzer({
     enabled: process.env.ANALYZE !== undefined,
@@ -18,4 +17,6 @@ const nextConfig = {
     },
 }
 
-export default withPlugins([[withBundleAnalyzer], nextConfig])
+const plugins = [withBundleAnalyzer]
+
+export default plugins.reduce((config, plugin) => plugin(config), nextConfig)
