@@ -1,5 +1,6 @@
 import type { GetStaticProps, InferGetStaticPropsType } from 'next'
 import ReactMarkdown from 'react-markdown'
+import { useMeta } from '~/hooks/useMeta'
 import { getAllSlugs, readMarkdownFile } from '~/lib/utils'
 
 export async function getStaticPaths() {
@@ -31,16 +32,22 @@ export const getStaticProps: GetStaticProps<{
 }
 
 export default function LegalDocument({
-    md,
+    md: { frontmatter, content },
 }: InferGetStaticPropsType<typeof getStaticProps>) {
+    const { Meta } = useMeta({
+        title: frontmatter.title,
+    })
     return (
-        <div className="custom-container mx-auto px-4">
-            <h1 className="block pb-24 pt-12 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl xl:text-6xl">
-                {md.frontmatter.title}
-            </h1>
-            <ReactMarkdown className="prose max-w-none">
-                {md.content}
-            </ReactMarkdown>
-        </div>
+        <>
+            <Meta />
+            <div className="custom-container mx-auto px-4">
+                <h1 className="block pb-24 pt-12 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl xl:text-6xl">
+                    {frontmatter.title}
+                </h1>
+                <ReactMarkdown className="prose max-w-none">
+                    {content}
+                </ReactMarkdown>
+            </div>
+        </>
     )
 }
