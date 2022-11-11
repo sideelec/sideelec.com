@@ -1,3 +1,4 @@
+import ReactMarkdown from 'react-markdown'
 import HeroIcon from '~/components/HeroIcon'
 import homeContent from '~/content/home.json'
 
@@ -20,9 +21,9 @@ function Card({ name, description, icon }: CardProps) {
                     <h3 className="mt-8 text-xl font-semibold tracking-tight text-gray-900">
                         {name}
                     </h3>
-                    <p className="mt-5 text-base text-gray-700">
+                    <ReactMarkdown className="prose prose-sm mt-5 text-base text-gray-700">
                         {description}
-                    </p>
+                    </ReactMarkdown>
                 </div>
             </div>
         </div>

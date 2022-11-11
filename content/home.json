@@ -1,8 +1,13 @@
 {
     "hero": {
-        "title1": "Distribution de",
-        "title2": "systèmes de sécurité",
-        "description": "Depuis 20 ans, SIDEELEC accompagne les installateurs de matériel de sécurité informatique. Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse, sint.",
+        "title1": "Votre partenaire en",
+        "title2": "sécurité électronique",
+        "description": "Nous accompagnons nos clients installateurs électriciens et spécialistes en maintenance dans leurs projets, de l'étude technique jusqu'à la mise en service sur site aux côtés de vos équipes. Nos activités clés :",
+        "features": [
+            "Alarme et détection incendie",
+            "Eclairage de sécurité",
+            "Appel malade"
+        ],
         "cta": {
             "contact": "Nous contacter",
             "knowMore": "En savoir plus"
@@ -13,37 +18,37 @@
         }
     },
     "solutions": {
-        "subtitle": "Nos solutions",
-        "title": "Nous touchons à de nombreux domaines",
+        "subtitle": "Nos solutions...",
+        "title": "pour la sécurité des personnes et des biens",
         "description": "Phasellus lorem quam molestie id quisque diam aenean nulla in. Accumsan in quis quis nunc, ullamcorper malesuada. Eleifend condimentum id viverra nulla.",
         "cards": [
             {
-                "name": "Push to Deploy",
-                "description": "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
+                "name": "Alarme et détection incendie",
+                "description": "Nous proposons tout type de SSI :\n- type 1 : adressable et conventionnel\n- type 2a\n- type 2b ou type 3\n- type 4 : filaire et radio\n\n+DAAF radio",
                 "icon": "CloudArrowUpIcon"
             },
             {
-                "name": "SSL Certificates",
-                "description": "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
+                "name": "Eclairage de sécurité",
+                "description": "- Blocs autonomes (BAES)\n- Source centrale et luminaires sur source centrale\n- Technologies SATI et adressable\n- Supervision avec application mobile",
                 "icon": "LockClosedIcon"
             },
             {
-                "name": "Simple Queues",
+                "name": "Appel malade",
                 "description": "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
                 "icon": "ArrowPathIcon"
             },
             {
-                "name": "Advanced Security",
+                "name": "Contrôle d'accès",
                 "description": "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
                 "icon": "ShieldCheckIcon"
             },
             {
-                "name": "Powerful API",
+                "name": "Alarme intrusion / PPMS",
                 "description": "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
                 "icon": "CogIcon"
             },
             {
-                "name": "Database Backups",
+                "name": "Energie secourue",
                 "description": "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
                 "icon": "ServerIcon"
             }
@@ -51,40 +56,47 @@
     },
     "services": {
         "subtitle": "Nos services",
-        "title": "Nous touchons à de nombreux domaines",
+        "title": "Notre expertise au service de vos projets",
         "description": "Phasellus lorem quam molestie id quisque diam aenean nulla in. Accumsan in quis quis nunc, ullamcorper malesuada. Eleifend condimentum id viverra nulla.",
         "cards": [
             {
-                "name": "Push to Deploy",
+                "name": "Logistique et stock",
+                "description": "Stock important de matériel (centrales, périphériques et pièces détachées). Livraison sous 24/48h en France métropolitaine.",
+                "icon": "LockClosedIcon"
+            },
+            {
+                "name": "Conseil avant-vente",
                 "description": "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
                 "icon": "CloudArrowUpIcon"
             },
             {
-                "name": "SSL Certificates",
-                "description": "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
-                "icon": "LockClosedIcon"
+                "name": "Assistance technique",
+                "description": "Notre équipe assure un support téléphonique et peut intervenir sur site pour la mise en service.",
+                "icon": "PhoneIcon"
             },
             {
-                "name": "Simple Queues",
-                "description": "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
-                "icon": "ArrowPathIcon"
-            },
-            {
-                "name": "Advanced Security",
-                "description": "Ac tincidunt sapien vehicula erat auctor pellentesque rhoncus. Et magna sit morbi lobortis.",
+                "name": "Service après-vente",
+                "description": "capacité à diagnostiquer + fournir les pièces détachées + accompagner leur remplacement sur site",
                 "icon": "ShieldCheckIcon"
             }
         ]
     },
     "partners": {
-        "subtitle": "Nos partenaires",
-        "title": "Ils nous font confiance",
+        "subtitle": "Nos partenaires fabricants",
+        "title": "Des relations de longue date",
         "cards": [
-            { "image": "/images/partners/nugelec.png", "name": "Nugelec" },
-            { "image": "/images/partners/slat.png", "name": "Slat" },
-            { "image": "/images/partners/ateis.png", "name": "Ateis" },
             { "image": "/images/partners/eaton.png", "name": "Eaton" },
-            { "image": "/images/partners/kaufel.jpg", "name": "Kaufel" }
+            { "image": "/images/partners/nugelec.png", "name": "Nugelec" },
+            { "image": "/Neutronic", "name": "Neutronic" },
+            { "image": "/CDVI", "name": "CDVI" },
+            { "image": "/images/partners/kaufel.jpg", "name": "Kaufel" },
+            { "image": "/Tunstall", "name": "Tunstall" },
+            { "image": "/images/partners/slat.png", "name": "Slat" },
+            { "image": "/YUASA", "name": "YUASA" },
+            { "image": "/UZ", "name": "UZ" },
+            { "image": "/ADETEC", "name": "ADETEC" },
+            { "image": "/AIPHONE", "name": "AIPHONE" },
+            { "image": "/images/partners/ateis.png", "name": "Ateis" }
         ]
     },
     "company": {

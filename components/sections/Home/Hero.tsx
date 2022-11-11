@@ -21,6 +21,13 @@ export default function Hero() {
                     <p className="mt-3 text-base text-gray-700 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
                         {hero.description}
                     </p>
+                    <div className="prose prose-lg mx-auto inline-block text-left font-bold text-gray-700">
+                        <ul>
+                            {hero.features.map((feature, i) => (
+                                <li key={i}>{feature}</li>
+                            ))}
+                        </ul>
+                    </div>
                     <div className="mt-8 grid gap-4 sm:grid-cols-2 md:flex">
                         <Button
                             as={Link}

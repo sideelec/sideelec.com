@@ -29,9 +29,11 @@ export default function Partners() {
                 </p>
                 <div className="mt-12">
                     <div className="grid grid-cols-2 gap-1 md:grid-cols-3">
-                        {partners.cards.map((card, index) => (
-                            <Card key={index} {...card} />
-                        ))}
+                        {partners.cards
+                            .sort((a, b) => a.name.localeCompare(b.name))
+                            .map((card, index) => (
+                                <Card key={index} {...card} />
+                            ))}
                     </div>
                 </div>
             </div>
